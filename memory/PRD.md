@@ -40,8 +40,8 @@ Build a website for the storytelling brand 'Narratives' that creates visual stor
 - Hover animations and transitions
 
 ### Design Requirements
-- **Primary Colors**: Neon pink/magenta (#FF10F0, #E91E8C) with orange (#FF6B35) and electric blue (#00D9FF)
-- Vibrant cyberpunk neon aesthetic with glowing effects
+- **Primary Colors**: Neon orange (#FF6B00, #FF8C00) with fluorescent yellow (#FFFF00) and fluorescent green (#39FF14)
+- Vibrant neon aesthetic with glowing effects
 - Dark theme with purple-to-blue gradients (#2D1B4E to black)
 - Neon glow effects on text and interactive elements using CSS text-shadow and box-shadow
 - Rounded-full buttons (9999px radius) with hover glow effects
@@ -49,7 +49,7 @@ Build a website for the storytelling brand 'Narratives' that creates visual stor
 - Modern typography with Inter font
 - Lucide React icons (no emoji icons)
 - Smooth animations and glowing transitions
-- Box-shadow glow effects on hover states
+- Box-shadow glow effects on hover states (orange, yellow, green)
 
 ---
 
@@ -180,8 +180,8 @@ Build a website for the storytelling brand 'Narratives' that creates visual stor
 ## Design System Summary
 
 ### Colors
-- **Primary**: Neon Pink/Magenta (#FF10F0, #E91E8C)
-- **Secondary**: Neon Orange (#FF6B35)
+- **Primary**: Neon Orange (#FF6B00, #FF8C00)
+- **Fluorescent**: Yellow (#FFFF00), Green (#39FF14)
 - **Accent**: Electric Blue (#00D9FF)
 - **Background**: Black (#000000), Dark Purple (#2D1B4E), Dark Navy (#0A0E1A)
 - **Text**: White (#FFFFFF), Gray (#999999)
@@ -194,16 +194,16 @@ Build a website for the storytelling brand 'Narratives' that creates visual stor
 ### Glow Effects
 - **Text Glow**: text-shadow with 10px, 20px, 30px spread
 - **Box Glow**: box-shadow with 15px, 30px, 45px spread
-- **Colors**: Pink (#FF10F0), Orange (#FF6B35), Blue (#00D9FF)
+- **Colors**: Orange (#FF6B00), Yellow (#FFFF00), Green (#39FF14), Blue (#00D9FF)
 
 ### Border Radius
 - **Buttons/Tags**: rounded-full (9999px)
 - **Cards**: rounded-lg (0.5rem)
 
 ### Components
-- Fixed header with backdrop blur and neon pink branding
-- Full-screen hero with video background and glowing orbs
-- Service cards with alternating neon colors and hover glow
-- Portfolio grid with neon borders and glow on hover
-- Contact form with glowing focus states
-- Footer with neon pink accents
+- Fixed header with backdrop blur and neon orange branding
+- Full-screen hero with video background, orange glowing headline, yellow "AI innovation" text
+- Service cards with alternating orange/green neon colors and hover glow
+- Portfolio grid with orange filter buttons and fluorescent green category badges
+- Contact form with glowing orange focus states and green phone icon
+- Footer with neon orange accents and glowing hover effects
