@@ -19,7 +19,7 @@ const Services = () => {
             Our <span className="text-neon-orange glow-orange">Services</span>
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            From visual storytelling to <span className="text-fluorescent-yellow">AI automation</span>, we bring your creative vision to life with cutting-edge technology
+            From visual storytelling to <span className="text-neon-blue">AI automation</span>, we bring your creative vision to life with cutting-edge technology
           </p>
         </div>
 
@@ -32,19 +32,19 @@ const Services = () => {
             return (
               <div
                 key={service.id}
-                className="group relative bg-dark-navy/50 backdrop-blur-sm border border-gray-800 rounded-lg p-8 hover:border-neon-orange transition-all duration-300 hover:transform hover:scale-105 hover:box-glow-orange"
+                className="group relative bg-dark-navy/50 backdrop-blur-sm border border-gray-800 rounded-lg p-8 hover:border-neon-orange transition-all duration-300 hover:transform hover:scale-105 hover:box-glow-orange select-none"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 {/* Icon */}
-                <div className={`w-16 h-16 rounded-lg ${isOrange ? 'bg-neon-orange/10' : 'bg-fluorescent-green/10'} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 ${isOrange ? 'group-hover:box-glow-orange' : 'group-hover:box-glow-green'}`}>
+                <div className={`w-16 h-16 rounded-lg ${isOrange ? 'bg-neon-orange/10' : 'bg-neon-blue/10'} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 ${isOrange ? 'group-hover:box-glow-orange' : 'group-hover:box-glow-blue'}`}>
                   <IconComponent 
                     size={32} 
-                    className={isOrange ? 'text-neon-orange' : 'text-fluorescent-green'}
+                    className={isOrange ? 'text-neon-orange' : 'text-neon-blue'}
                   />
                 </div>
 
                 {/* Content */}
-                <h3 className={`text-2xl font-bold text-white mb-4 transition-colors duration-300 ${isOrange ? 'group-hover:text-neon-orange group-hover:glow-orange' : 'group-hover:text-fluorescent-green group-hover:glow-green'}`}>
+                <h3 className={`text-2xl font-bold text-white mb-4 transition-colors duration-300 ${isOrange ? 'group-hover:text-neon-orange group-hover:glow-orange' : 'group-hover:text-neon-blue group-hover:glow-blue'}`}>
                   {service.title}
                 </h3>
                 <p className="text-gray-400 leading-relaxed">
@@ -52,7 +52,7 @@ const Services = () => {
                 </p>
 
                 {/* Hover Effect */}
-                <div className={`absolute inset-0 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none ${isOrange ? 'bg-gradient-to-br from-neon-orange/5 to-transparent' : 'bg-gradient-to-br from-fluorescent-green/5 to-transparent'}`}></div>
+                <div className={`absolute inset-0 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none ${isOrange ? 'bg-gradient-to-br from-neon-orange/5 to-transparent' : 'bg-gradient-to-br from-neon-blue/5 to-transparent'}`}></div>
               </div>
             );
           })}

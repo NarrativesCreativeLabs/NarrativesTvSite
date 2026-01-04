@@ -162,9 +162,9 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="flex items-start gap-4 p-4 rounded-lg bg-dark-navy/50 border border-gray-800 hover:border-fluorescent-green hover:box-glow-green transition-all duration-300">
-                <div className="w-12 h-12 rounded-lg bg-fluorescent-green/10 flex items-center justify-center flex-shrink-0">
-                  <Phone className="text-fluorescent-green" size={24} />
+              <div className="flex items-start gap-4 p-4 rounded-lg bg-dark-navy/50 border border-gray-800 hover:border-neon-blue hover:box-glow-blue transition-all duration-300">
+                <div className="w-12 h-12 rounded-lg bg-neon-blue/10 flex items-center justify-center flex-shrink-0">
+                  <Phone className="text-neon-blue" size={24} />
                 </div>
                 <div>
                   <h4 className="text-white font-bold mb-1">Phone</h4>

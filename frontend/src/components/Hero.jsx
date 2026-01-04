@@ -43,8 +43,8 @@ const Hero = () => {
       {/* Animated background elements with neon glow */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-neon-orange/20 rounded-full blur-3xl animate-pulse box-glow-orange"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-fluorescent-yellow/20 rounded-full blur-3xl animate-pulse box-glow-yellow" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-fluorescent-green/10 rounded-full blur-3xl animate-pulse box-glow-green" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-neon-blue/20 rounded-full blur-3xl animate-pulse box-glow-blue" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-cyan/10 rounded-full blur-3xl animate-pulse box-glow-cyan" style={{ animationDelay: '2s' }}></div>
       </div>
 
       {/* Content */}
@@ -65,7 +65,7 @@ const Hero = () => {
 
           {/* Subheadline */}
           <p className="text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-3xl mx-auto font-light leading-relaxed">
-            We blend visual artistry with <span className="text-fluorescent-yellow glow-yellow">AI innovation</span> to create compelling narratives that captivate and transform.
+            We blend visual artistry with <span className="text-neon-blue glow-blue">AI innovation</span> to create compelling narratives that captivate and transform.
           </p>
 
           {/* CTA Buttons */}
@@ -79,7 +79,7 @@ const Hero = () => {
             </button>
             <button
               onClick={scrollToPortfolio}
-              className="cta-button bg-transparent text-white border-fluorescent-green hover:bg-fluorescent-green hover:text-black hover:box-glow-green transition-all duration-300 flex items-center gap-2 group"
+              className="cta-button bg-transparent text-white border-neon-blue hover:bg-neon-blue hover:text-black hover:box-glow-blue transition-all duration-300 flex items-center gap-2 group"
             >
               <Play size={16} className="group-hover:scale-110 transition-transform duration-300" />
               View Our Work

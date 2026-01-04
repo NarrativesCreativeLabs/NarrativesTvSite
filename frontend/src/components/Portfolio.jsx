@@ -18,7 +18,7 @@ const Portfolio = () => {
         {/* Section Header */}
         <div className="text-center mb-12 space-y-4">
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-display font-bold text-white">
-            Our <span className="text-fluorescent-yellow glow-yellow">Portfolio</span>
+            Our <span className="text-neon-blue glow-blue">Portfolio</span>
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
             Explore our collection of captivating visual stories and creative projects
@@ -72,7 +72,7 @@ const Portfolio = () => {
               </div>
 
               {/* Category Badge */}
-              <div className="absolute top-4 left-4 px-3 py-1 rounded-full bg-fluorescent-green/80 backdrop-blur-sm box-glow-green">
+              <div className="absolute top-4 left-4 px-3 py-1 rounded-full bg-neon-blue/80 backdrop-blur-sm box-glow-blue">
                 <span className="text-xs font-mono uppercase tracking-wider text-black font-bold">
                   {video.category}
                 </span>

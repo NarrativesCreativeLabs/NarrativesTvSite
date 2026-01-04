@@ -12,7 +12,7 @@ const About = () => {
               <h2 className="text-4xl sm:text-5xl md:text-6xl font-display font-bold text-white">
                 About <span className="text-neon-orange glow-orange">Narratives</span>
               </h2>
-              <div className="w-24 h-1 bg-gradient-to-r from-neon-orange via-fluorescent-yellow to-fluorescent-green"></div>
+              <div className="w-24 h-1 bg-gradient-to-r from-neon-orange via-neon-blue to-cyan"></div>
             </div>
 
             <p className="text-lg text-gray-300 leading-relaxed">
@@ -50,11 +50,11 @@ const About = () => {
                 alt="Narratives Team"
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-tr from-neon-orange/20 via-fluorescent-yellow/20 to-fluorescent-green/20"></div>
+              <div className="absolute inset-0 bg-gradient-to-tr from-neon-orange/20 via-neon-blue/20 to-cyan/20"></div>
             </div>
 
             {/* Decorative Elements */}
-            <div className="absolute -top-8 -right-8 w-64 h-64 bg-fluorescent-green/20 rounded-full blur-3xl box-glow-green"></div>
+            <div className="absolute -top-8 -right-8 w-64 h-64 bg-neon-blue/20 rounded-full blur-3xl box-glow-blue"></div>
             <div className="absolute -bottom-8 -left-8 w-64 h-64 bg-neon-orange/20 rounded-full blur-3xl box-glow-orange"></div>
           </div>
         </div>
@@ -70,7 +70,7 @@ const About = () => {
             {
               title: 'Innovation First',
               description: 'We leverage the latest technology and AI to push creative boundaries.',
-              color: 'fluorescent-green'
+              color: 'neon-blue'
             },
             {
               title: 'Client Focused',
@@ -83,14 +83,14 @@ const About = () => {
               className="text-center space-y-4 p-6 rounded-lg bg-dark-navy/30 border border-gray-800 hover:border-neon-orange hover:box-glow-orange transition-all duration-300"
             >
               <div className={`w-12 h-12 rounded-full mx-auto flex items-center justify-center ${
-                value.color === 'neon-orange' ? 'bg-neon-orange/10 box-glow-orange' : 'bg-fluorescent-green/10 box-glow-green'
+                value.color === 'neon-orange' ? 'bg-neon-orange/10 box-glow-orange' : 'bg-neon-blue/10 box-glow-blue'
               }`}>
                 <div className={`w-6 h-6 rounded-full ${
-                  value.color === 'neon-orange' ? 'bg-neon-orange' : 'bg-fluorescent-green'
+                  value.color === 'neon-orange' ? 'bg-neon-orange' : 'bg-neon-blue'
                 }`}></div>
               </div>
               <h3 className={`text-xl font-bold ${
-                value.color === 'neon-orange' ? 'text-neon-orange' : 'text-fluorescent-green'
+                value.color === 'neon-orange' ? 'text-neon-orange' : 'text-neon-blue'
               }`}>{value.title}</h3>
               <p className="text-gray-400">{value.description}</p>
             </div>
