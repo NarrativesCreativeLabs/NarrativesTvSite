@@ -4,12 +4,16 @@
 
 @layer base {
     :root {
-        /* Narratives Brand Colors - Neon Orange & Blue Theme */
+        /* Narratives Brand Colors - Neon Cyberpunk Theme */
+        --neon-pink: #FF10F0;
+        --neon-magenta: #E91E8C;
         --neon-orange: #FF6B35;
-        --neon-orange-light: #FF8C42;
+        --neon-yellow: #FFD700;
         --neon-blue: #00D9FF;
-        --neon-blue-light: #0EA5E9;
-        --dark-navy: #0A1628;
+        --electric-blue: #0EA5E9;
+        --purple: #8B3FFF;
+        --dark-purple: #2D1B4E;
+        --dark-navy: #0A0E1A;
         --black: #000000;
         --white: #FFFFFF;
         
@@ -60,12 +64,28 @@
 
 @layer utilities {
     /* Custom Narratives Colors */
+    .text-neon-pink {
+        color: var(--neon-pink);
+    }
+    
+    .text-neon-magenta {
+        color: var(--neon-magenta);
+    }
+    
     .text-neon-orange {
         color: var(--neon-orange);
     }
     
     .text-neon-blue {
         color: var(--neon-blue);
+    }
+    
+    .bg-neon-pink {
+        background-color: var(--neon-pink);
+    }
+    
+    .bg-neon-magenta {
+        background-color: var(--neon-magenta);
     }
     
     .bg-neon-orange {
@@ -80,12 +100,45 @@
         background-color: var(--dark-navy);
     }
     
+    .bg-dark-purple {
+        background-color: var(--dark-purple);
+    }
+    
+    .border-neon-pink {
+        border-color: var(--neon-pink);
+    }
+    
     .border-neon-orange {
         border-color: var(--neon-orange);
     }
     
     .border-neon-blue {
         border-color: var(--neon-blue);
+    }
+
+    /* Neon Glow Effects */
+    .glow-pink {
+        text-shadow: 0 0 10px var(--neon-pink), 0 0 20px var(--neon-pink), 0 0 30px var(--neon-pink);
+    }
+    
+    .glow-orange {
+        text-shadow: 0 0 10px var(--neon-orange), 0 0 20px var(--neon-orange), 0 0 30px var(--neon-orange);
+    }
+    
+    .glow-blue {
+        text-shadow: 0 0 10px var(--neon-blue), 0 0 20px var(--neon-blue), 0 0 30px var(--neon-blue);
+    }
+    
+    .box-glow-pink {
+        box-shadow: 0 0 15px var(--neon-pink), 0 0 30px var(--neon-pink), 0 0 45px rgba(255, 16, 240, 0.3);
+    }
+    
+    .box-glow-orange {
+        box-shadow: 0 0 15px var(--neon-orange), 0 0 30px var(--neon-orange), 0 0 45px rgba(255, 107, 53, 0.3);
+    }
+    
+    .box-glow-blue {
+        box-shadow: 0 0 15px var(--neon-blue), 0 0 30px var(--neon-blue), 0 0 45px rgba(0, 217, 255, 0.3);
     }
 
     /* Font Display for Headings */

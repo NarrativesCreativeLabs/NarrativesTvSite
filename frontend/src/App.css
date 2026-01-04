@@ -1,4 +1,4 @@
-/* Narratives Brand Styles */
+/* Narratives Brand Styles - Neon Cyberpunk Theme */
 
 /* Navigation Links */
 .nav-link {
@@ -9,16 +9,20 @@
   text-decoration: none;
   padding: 0;
   border-radius: 0;
-  transition: color 0.15s ease, text-decoration 0.15s ease;
+  transition: all 0.3s ease;
   position: relative;
 }
 
+.nav-link:hover {
+  text-shadow: 0 0 10px currentColor;
+}
+
 .nav-link:focus {
-  outline: 2px solid #FF6B35;
+  outline: 2px solid #FF10F0;
   outline-offset: 2px;
 }
 
-/* CTA Buttons */
+/* CTA Buttons with Neon Glow */
 .cta-button {
   border-radius: 9999px;
   padding: 0.625rem 1.375rem;
@@ -36,6 +40,12 @@
   justify-content: center;
   text-decoration: none;
   border-width: 2px;
+  position: relative;
+}
+
+.cta-button:hover {
+  box-shadow: 0 0 20px currentColor, 0 0 40px currentColor, 0 0 60px rgba(255, 16, 240, 0.3);
+  transform: translateY(-2px);
 }
 
 .cta-button:active {
