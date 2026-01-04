@@ -4,11 +4,12 @@
 
 @layer base {
     :root {
-        /* Narratives Brand Colors - Neon Cyberpunk Theme */
-        --neon-pink: #FF10F0;
-        --neon-magenta: #E91E8C;
-        --neon-orange: #FF6B35;
-        --neon-yellow: #FFD700;
+        /* Narratives Brand Colors - Neon Orange & Fluorescent Theme */
+        --neon-orange: #FF6B00;
+        --neon-orange-bright: #FF8C00;
+        --fluorescent-yellow: #FFFF00;
+        --fluorescent-green: #39FF14;
+        --fluorescent-orange: #FF9500;
         --neon-blue: #00D9FF;
         --electric-blue: #0EA5E9;
         --purple: #8B3FFF;
@@ -64,32 +65,36 @@
 
 @layer utilities {
     /* Custom Narratives Colors */
-    .text-neon-pink {
-        color: var(--neon-pink);
-    }
-    
-    .text-neon-magenta {
-        color: var(--neon-magenta);
-    }
-    
     .text-neon-orange {
         color: var(--neon-orange);
+    }
+    
+    .text-fluorescent-yellow {
+        color: var(--fluorescent-yellow);
+    }
+    
+    .text-fluorescent-green {
+        color: var(--fluorescent-green);
+    }
+    
+    .text-fluorescent-orange {
+        color: var(--fluorescent-orange);
     }
     
     .text-neon-blue {
         color: var(--neon-blue);
     }
     
-    .bg-neon-pink {
-        background-color: var(--neon-pink);
-    }
-    
-    .bg-neon-magenta {
-        background-color: var(--neon-magenta);
-    }
-    
     .bg-neon-orange {
         background-color: var(--neon-orange);
+    }
+    
+    .bg-fluorescent-yellow {
+        background-color: var(--fluorescent-yellow);
+    }
+    
+    .bg-fluorescent-green {
+        background-color: var(--fluorescent-green);
     }
     
     .bg-neon-blue {
@@ -104,12 +109,12 @@
         background-color: var(--dark-purple);
     }
     
-    .border-neon-pink {
-        border-color: var(--neon-pink);
-    }
-    
     .border-neon-orange {
         border-color: var(--neon-orange);
+    }
+    
+    .border-fluorescent-yellow {
+        border-color: var(--fluorescent-yellow);
     }
     
     .border-neon-blue {
@@ -117,24 +122,32 @@
     }
 
     /* Neon Glow Effects */
-    .glow-pink {
-        text-shadow: 0 0 10px var(--neon-pink), 0 0 20px var(--neon-pink), 0 0 30px var(--neon-pink);
-    }
-    
     .glow-orange {
         text-shadow: 0 0 10px var(--neon-orange), 0 0 20px var(--neon-orange), 0 0 30px var(--neon-orange);
+    }
+    
+    .glow-yellow {
+        text-shadow: 0 0 10px var(--fluorescent-yellow), 0 0 20px var(--fluorescent-yellow), 0 0 30px var(--fluorescent-yellow);
+    }
+    
+    .glow-green {
+        text-shadow: 0 0 10px var(--fluorescent-green), 0 0 20px var(--fluorescent-green), 0 0 30px var(--fluorescent-green);
     }
     
     .glow-blue {
         text-shadow: 0 0 10px var(--neon-blue), 0 0 20px var(--neon-blue), 0 0 30px var(--neon-blue);
     }
     
-    .box-glow-pink {
-        box-shadow: 0 0 15px var(--neon-pink), 0 0 30px var(--neon-pink), 0 0 45px rgba(255, 16, 240, 0.3);
+    .box-glow-orange {
+        box-shadow: 0 0 15px var(--neon-orange), 0 0 30px var(--neon-orange), 0 0 45px rgba(255, 107, 0, 0.3);
     }
     
-    .box-glow-orange {
-        box-shadow: 0 0 15px var(--neon-orange), 0 0 30px var(--neon-orange), 0 0 45px rgba(255, 107, 53, 0.3);
+    .box-glow-yellow {
+        box-shadow: 0 0 15px var(--fluorescent-yellow), 0 0 30px var(--fluorescent-yellow), 0 0 45px rgba(255, 255, 0, 0.3);
+    }
+    
+    .box-glow-green {
+        box-shadow: 0 0 15px var(--fluorescent-green), 0 0 30px var(--fluorescent-green), 0 0 45px rgba(57, 255, 20, 0.3);
     }
     
     .box-glow-blue {
