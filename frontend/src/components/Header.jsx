@@ -24,7 +24,7 @@ const Header = () => {
   return (
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-black/90 backdrop-blur-md border-b border-neon-pink/20' : 'bg-transparent'
+        isScrolled ? 'bg-black/90 backdrop-blur-md border-b border-neon-orange/20' : 'bg-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -32,7 +32,7 @@ const Header = () => {
           {/* Logo */}
           <button 
             onClick={() => scrollToSection('hero')}
-            className="text-2xl font-display font-bold text-neon-pink glow-pink hover:text-neon-magenta transition-colors duration-300"
+            className="text-2xl font-display font-bold text-neon-orange glow-orange hover:text-fluorescent-orange transition-colors duration-300"
           >
             NARRATIVES
           </button>
@@ -41,25 +41,25 @@ const Header = () => {
           <nav className="hidden md:flex items-center gap-8">
             <button 
               onClick={() => scrollToSection('services')}
-              className="nav-link text-white hover:text-neon-pink transition-colors duration-200"
+              className="nav-link text-white hover:text-neon-orange transition-colors duration-200"
             >
               Services
             </button>
             <button 
               onClick={() => scrollToSection('portfolio')}
-              className="nav-link text-white hover:text-neon-pink transition-colors duration-200"
+              className="nav-link text-white hover:text-neon-orange transition-colors duration-200"
             >
               Portfolio
             </button>
             <button 
               onClick={() => scrollToSection('about')}
-              className="nav-link text-white hover:text-neon-pink transition-colors duration-200"
+              className="nav-link text-white hover:text-neon-orange transition-colors duration-200"
             >
               About
             </button>
             <button 
               onClick={() => scrollToSection('contact')}
-              className="cta-button bg-neon-pink text-black border-neon-pink hover:bg-neon-magenta hover:border-neon-magenta hover:box-glow-pink"
+              className="cta-button bg-neon-orange text-black border-neon-orange hover:bg-fluorescent-orange hover:border-fluorescent-orange hover:box-glow-orange"
             >
               Get in Touch
             </button>
@@ -76,7 +76,7 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <nav className="md:hidden py-4 border-t border-neon-pink/20">
+          <nav className="md:hidden py-4 border-t border-neon-orange/20">
             <div className="flex flex-col gap-4">
               <button 
                 onClick={() => scrollToSection('services')}
@@ -98,7 +98,7 @@ const Header = () => {
               </button>
               <button 
                 onClick={() => scrollToSection('contact')}
-                className="cta-button bg-neon-pink text-black border-neon-pink hover:bg-neon-magenta hover:border-neon-magenta w-full"
+                className="cta-button bg-neon-orange text-black border-neon-orange hover:bg-fluorescent-orange hover:border-fluorescent-orange w-full"
               >
                 Get in Touch
               </button>
