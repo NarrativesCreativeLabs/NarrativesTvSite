@@ -10,9 +10,9 @@ const About = () => {
           <div className="space-y-8">
             <div className="space-y-4">
               <h2 className="text-4xl sm:text-5xl md:text-6xl font-display font-bold text-white">
-                About <span className="text-neon-pink glow-pink">Narratives</span>
+                About <span className="text-neon-orange glow-orange">Narratives</span>
               </h2>
-              <div className="w-24 h-1 bg-gradient-to-r from-neon-pink via-neon-orange to-neon-blue"></div>
+              <div className="w-24 h-1 bg-gradient-to-r from-neon-orange via-fluorescent-yellow to-fluorescent-green"></div>
             </div>
 
             <p className="text-lg text-gray-300 leading-relaxed">
@@ -28,9 +28,9 @@ const About = () => {
               {teamInfo.stats.map((stat, index) => (
                 <div 
                   key={index}
-                  className="bg-dark-navy/50 backdrop-blur-sm border border-gray-800 rounded-lg p-6 hover:border-neon-pink hover:box-glow-pink transition-all duration-300"
+                  className="bg-dark-navy/50 backdrop-blur-sm border border-gray-800 rounded-lg p-6 hover:border-neon-orange hover:box-glow-orange transition-all duration-300"
                 >
-                  <div className="text-3xl font-bold text-neon-pink glow-pink mb-2">
+                  <div className="text-3xl font-bold text-neon-orange glow-orange mb-2">
                     {stat.value}
                   </div>
                   <div className="text-sm text-gray-400 uppercase tracking-wider font-mono">
@@ -50,12 +50,12 @@ const About = () => {
                 alt="Narratives Team"
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-tr from-neon-pink/20 via-neon-orange/20 to-neon-blue/20"></div>
+              <div className="absolute inset-0 bg-gradient-to-tr from-neon-orange/20 via-fluorescent-yellow/20 to-fluorescent-green/20"></div>
             </div>
 
             {/* Decorative Elements */}
-            <div className="absolute -top-8 -right-8 w-64 h-64 bg-neon-blue/20 rounded-full blur-3xl box-glow-blue"></div>
-            <div className="absolute -bottom-8 -left-8 w-64 h-64 bg-neon-pink/20 rounded-full blur-3xl box-glow-pink"></div>
+            <div className="absolute -top-8 -right-8 w-64 h-64 bg-fluorescent-green/20 rounded-full blur-3xl box-glow-green"></div>
+            <div className="absolute -bottom-8 -left-8 w-64 h-64 bg-neon-orange/20 rounded-full blur-3xl box-glow-orange"></div>
           </div>
         </div>
 
@@ -65,32 +65,32 @@ const About = () => {
             {
               title: 'Creative Excellence',
               description: 'Every project is crafted with meticulous attention to detail and artistic vision.',
-              color: 'neon-pink'
+              color: 'neon-orange'
             },
             {
               title: 'Innovation First',
               description: 'We leverage the latest technology and AI to push creative boundaries.',
-              color: 'neon-blue'
+              color: 'fluorescent-green'
             },
             {
               title: 'Client Focused',
               description: 'Your story is our priority. We collaborate closely to bring your vision to life.',
-              color: 'neon-pink'
+              color: 'neon-orange'
             }
           ].map((value, index) => (
             <div
               key={index}
-              className="text-center space-y-4 p-6 rounded-lg bg-dark-navy/30 border border-gray-800 hover:border-neon-pink hover:box-glow-pink transition-all duration-300"
+              className="text-center space-y-4 p-6 rounded-lg bg-dark-navy/30 border border-gray-800 hover:border-neon-orange hover:box-glow-orange transition-all duration-300"
             >
               <div className={`w-12 h-12 rounded-full mx-auto flex items-center justify-center ${
-                value.color === 'neon-pink' ? 'bg-neon-pink/10 box-glow-pink' : 'bg-neon-blue/10 box-glow-blue'
+                value.color === 'neon-orange' ? 'bg-neon-orange/10 box-glow-orange' : 'bg-fluorescent-green/10 box-glow-green'
               }`}>
                 <div className={`w-6 h-6 rounded-full ${
-                  value.color === 'neon-pink' ? 'bg-neon-pink' : 'bg-neon-blue'
+                  value.color === 'neon-orange' ? 'bg-neon-orange' : 'bg-fluorescent-green'
                 }`}></div>
               </div>
               <h3 className={`text-xl font-bold ${
-                value.color === 'neon-pink' ? 'text-neon-pink' : 'text-neon-blue'
+                value.color === 'neon-orange' ? 'text-neon-orange' : 'text-fluorescent-green'
               }`}>{value.title}</h3>
               <p className="text-gray-400">{value.description}</p>
             </div>

@@ -14,7 +14,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
           <div className="col-span-1 md:col-span-2">
-            <h3 className="text-2xl font-display font-bold text-neon-pink glow-pink mb-4">
+            <h3 className="text-2xl font-display font-bold text-neon-orange glow-orange mb-4">
               NARRATIVES
             </h3>
             <p className="text-gray-400 mb-4 max-w-md">
@@ -26,7 +26,7 @@ const Footer = () => {
                 <a
                   key={index}
                   href="#"
-                  className="w-10 h-10 rounded-full bg-dark-navy border border-gray-700 hover:border-neon-pink hover:bg-neon-pink/10 hover:box-glow-pink flex items-center justify-center text-gray-400 hover:text-neon-pink transition-all duration-300"
+                  className="w-10 h-10 rounded-full bg-dark-navy border border-gray-700 hover:border-neon-orange hover:bg-neon-orange/10 hover:box-glow-orange flex items-center justify-center text-gray-400 hover:text-neon-orange transition-all duration-300"
                 >
                   {letter}
                 </a>
@@ -49,7 +49,7 @@ const Footer = () => {
                         element.scrollIntoView({ behavior: 'smooth' });
                       }
                     }}
-                    className="text-gray-400 hover:text-neon-pink transition-colors duration-200"
+                    className="text-gray-400 hover:text-neon-orange transition-colors duration-200"
                   >
                     {link}
                   </button>
@@ -93,7 +93,7 @@ const Footer = () => {
           {/* Scroll to Top Button */}
           <button
             onClick={scrollToTop}
-            className="w-10 h-10 rounded-full bg-neon-pink text-black hover:bg-neon-magenta hover:box-glow-pink transition-all duration-300 flex items-center justify-center hover:scale-110"
+            className="w-10 h-10 rounded-full bg-neon-orange text-black hover:bg-fluorescent-orange hover:box-glow-orange transition-all duration-300 flex items-center justify-center hover:scale-110"
             aria-label="Scroll to top"
           >
             <ArrowUp size={20} />
