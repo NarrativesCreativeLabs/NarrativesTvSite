@@ -46,7 +46,7 @@ const Contact = () => {
         {/* Section Header */}
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-display font-bold text-white">
-            Let's Create <span className="text-neon-orange">Together</span>
+            Let's Create <span className="text-neon-pink glow-pink">Together</span>
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
             Have a project in mind? Get in touch and let's bring your story to life
@@ -68,7 +68,7 @@ const Contact = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-black border border-gray-700 rounded-lg text-white focus:outline-none focus:border-neon-orange transition-colors duration-200"
+                  className="w-full px-4 py-3 bg-black border border-gray-700 rounded-lg text-white focus:outline-none focus:border-neon-pink focus:box-glow-pink transition-all duration-200"
                   placeholder="John Doe"
                 />
               </div>
@@ -84,7 +84,7 @@ const Contact = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-black border border-gray-700 rounded-lg text-white focus:outline-none focus:border-neon-orange transition-colors duration-200"
+                  className="w-full px-4 py-3 bg-black border border-gray-700 rounded-lg text-white focus:outline-none focus:border-neon-pink focus:box-glow-pink transition-all duration-200"
                   placeholder="john@example.com"
                 />
               </div>
@@ -100,7 +100,7 @@ const Contact = () => {
                   value={formData.subject}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-black border border-gray-700 rounded-lg text-white focus:outline-none focus:border-neon-orange transition-colors duration-200"
+                  className="w-full px-4 py-3 bg-black border border-gray-700 rounded-lg text-white focus:outline-none focus:border-neon-pink focus:box-glow-pink transition-all duration-200"
                   placeholder="Project Inquiry"
                 />
               </div>
@@ -124,7 +124,7 @@ const Contact = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full cta-button bg-neon-orange text-black border-neon-orange hover:bg-neon-blue hover:border-neon-blue hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full cta-button bg-neon-pink text-black border-neon-pink hover:bg-neon-magenta hover:border-neon-magenta hover:box-glow-pink hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isSubmitting ? (
                   <>Sending...</>
@@ -150,33 +150,33 @@ const Contact = () => {
 
             {/* Contact Details */}
             <div className="space-y-6">
-              <div className="flex items-start gap-4 p-4 rounded-lg bg-dark-navy/50 border border-gray-800 hover:border-neon-orange transition-colors duration-300">
-                <div className="w-12 h-12 rounded-lg bg-neon-orange/10 flex items-center justify-center flex-shrink-0">
-                  <Mail className="text-neon-orange" size={24} />
+              <div className="flex items-start gap-4 p-4 rounded-lg bg-dark-navy/50 border border-gray-800 hover:border-neon-pink hover:box-glow-pink transition-all duration-300">
+                <div className="w-12 h-12 rounded-lg bg-neon-pink/10 flex items-center justify-center flex-shrink-0">
+                  <Mail className="text-neon-pink" size={24} />
                 </div>
                 <div>
                   <h4 className="text-white font-bold mb-1">Email</h4>
-                  <a href="mailto:hello@narratives.studio" className="text-gray-400 hover:text-neon-orange transition-colors duration-200">
+                  <a href="mailto:hello@narratives.studio" className="text-gray-400 hover:text-neon-pink transition-colors duration-200">
                     hello@narratives.studio
                   </a>
                 </div>
               </div>
 
-              <div className="flex items-start gap-4 p-4 rounded-lg bg-dark-navy/50 border border-gray-800 hover:border-neon-orange transition-colors duration-300">
+              <div className="flex items-start gap-4 p-4 rounded-lg bg-dark-navy/50 border border-gray-800 hover:border-neon-blue hover:box-glow-blue transition-all duration-300">
                 <div className="w-12 h-12 rounded-lg bg-neon-blue/10 flex items-center justify-center flex-shrink-0">
                   <Phone className="text-neon-blue" size={24} />
                 </div>
                 <div>
                   <h4 className="text-white font-bold mb-1">Phone</h4>
-                  <a href="tel:+1234567890" className="text-gray-400 hover:text-neon-orange transition-colors duration-200">
+                  <a href="tel:+1234567890" className="text-gray-400 hover:text-neon-pink transition-colors duration-200">
                     +1 (234) 567-8900
                   </a>
                 </div>
               </div>
 
-              <div className="flex items-start gap-4 p-4 rounded-lg bg-dark-navy/50 border border-gray-800 hover:border-neon-orange transition-colors duration-300">
-                <div className="w-12 h-12 rounded-lg bg-neon-orange/10 flex items-center justify-center flex-shrink-0">
-                  <MapPin className="text-neon-orange" size={24} />
+              <div className="flex items-start gap-4 p-4 rounded-lg bg-dark-navy/50 border border-gray-800 hover:border-neon-pink hover:box-glow-pink transition-all duration-300">
+                <div className="w-12 h-12 rounded-lg bg-neon-pink/10 flex items-center justify-center flex-shrink-0">
+                  <MapPin className="text-neon-pink" size={24} />
                 </div>
                 <div>
                   <h4 className="text-white font-bold mb-1">Location</h4>
@@ -196,7 +196,7 @@ const Contact = () => {
                   <a
                     key={index}
                     href="#"
-                    className="w-12 h-12 rounded-lg bg-dark-navy/50 border border-gray-800 hover:border-neon-orange hover:bg-neon-orange/10 flex items-center justify-center text-gray-400 hover:text-neon-orange transition-all duration-300"
+                    className="w-12 h-12 rounded-lg bg-dark-navy/50 border border-gray-800 hover:border-neon-pink hover:bg-neon-pink/10 hover:box-glow-pink flex items-center justify-center text-gray-400 hover:text-neon-pink transition-all duration-300"
                   >
                     {platform.charAt(0)}
                   </a>
