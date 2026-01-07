@@ -12,7 +12,7 @@ import { Toaster } from "./components/ui/sonner";
 
 const Home = () => {
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen bg-black overflow-x-hidden">
       <Header />
       <main>
         <Hero />

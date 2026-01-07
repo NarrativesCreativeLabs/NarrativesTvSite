@@ -1,4 +1,4 @@
-/* Narratives Brand Styles - Neon Cyberpunk Theme */
+/* Narratives Brand Styles - Neon Golden Theme */
 
 /* Navigation Links */
 .nav-link {
@@ -14,11 +14,11 @@
 }
 
 .nav-link:hover {
-  text-shadow: 0 0 10px currentColor;
+  text-shadow: 0 0 10px var(--primary);
 }
 
 .nav-link:focus {
-  outline: 2px solid #FF6B00;
+  outline: 2px solid var(--primary);
   outline-offset: 2px;
 }
 
@@ -44,7 +44,7 @@
 }
 
 .cta-button:hover {
-  box-shadow: 0 0 20px currentColor, 0 0 40px currentColor, 0 0 60px rgba(255, 107, 0, 0.3);
+  box-shadow: 0 0 20px var(--primary), 0 0 40px var(--primary-dark), 0 0 60px rgba(250, 204, 21, 0.3);
   transform: translateY(-2px);
 }
 
@@ -84,14 +84,14 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background: #000;
+  background: #00000000;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #FF6B35;
+  background: #FACC15;
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #00D9FF;
+  background: var(--primary-dark);
 }
