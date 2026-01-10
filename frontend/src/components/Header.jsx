@@ -33,7 +33,7 @@ const Header = () => {
             : "bg-transparent border-transparent"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
           <div className="flex items-center justify-between h-24">
             {/* Logo */}
             <div className="flex items-center gap-3 cursor-pointer group">
@@ -96,12 +96,7 @@ const Header = () => {
                   {item}
                 </a>
               ))}
-              <button
-                className="w-full mt-4 bg-gradient-to-r from-[rgb(var(--primary))] to-[rgb(var(--primary-dark))] text-black px-4 py-4 font-bold text-lg"
-                style={{ borderRadius: "var(--radius-input)" }}
-              >
-                Let's Talk
-              </button>
+            
             </div>
           </div>
         )}

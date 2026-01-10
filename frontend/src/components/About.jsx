@@ -1,92 +1,90 @@
-import React from 'react';
-import { teamInfo } from '../data/mockData';
+import React from "react";
+import { teamInfo } from "../data/mockData";
 
 const About = () => {
   return (
-    <section id="about" className="py-24 bg-gradient-to-b from-surface to-background">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          {/* Left: Content */}
-          <div className="space-y-8">
-            <div className="space-y-4">
-              <h2 className="text-4xl sm:text-5xl md:text-6xl font-display font-bold text-textMain">
-                About <span className="text-primary glow-primary">Narratives</span>
-              </h2>
-              <div className="w-24 h-1 bg-gradient-to-r from-primary-soft via-primary to-primary-dark"></div>
+    <section
+      id="about"
+      className="relative max-w-7xl mx-auto px-4 pb-10 sm:px-6 lg:px-10 overflow-hidden"
+    >
+      {/* Decoration */}
+      <div className="absolute top-[50%] right-20 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#facc15] rounded-full blur-[120px] opacity-10 pointer-events-none z-0 mix-blend-screen"></div>
+      <div className="absolute bottom-28 right-0 translate-x-1/3 translate-y-1/3 w-[600px] h-[600px] bg-[#facc1552] rounded-full blur-[120px] opacity-10 pointer-events-none z-0 mix-blend-screen"></div>
+
+      <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full border border-zinc-800 bg-zinc-900/50 text-[rgb(var(--text-muted))] text-xs font-bold uppercase tracking-wider mb-8">
+        <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+        Since 2018
+      </div>
+      <div className="flex flex-col md:flex-row gap-3 items-center justify-normal">
+        <div className="leftSide w-full md:w-[60%] md:pr-14">
+          <h2 className="text-4xl md:text-6xl font-bold mb-8 text-white leading-tight">
+            About <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-[#f59f0b]">
+              Narratives
+            </span>
+          </h2>
+          <div className="space-y-6 text-white/65 text-lg font-light leading-relaxed">
+            <p>
+              Narratives is a creative storytelling studio that pushes the
+              boundaries of visual communication. We combine artistic vision
+              with cutting-edge technology to create stories that resonate,
+              inspire, and transform.
+            </p>
+            <p>
+              Our mission is to craft compelling narratives that bridge the gap
+              between imagination and reality, using the latest in visual
+              technology and AI innovation.
+            </p>
+          </div>
+          <div className="mt-10 space-y-6">
+            <div className="border-l-2 border-primary/30 pl-6 transition-all hover:border-[#FACC15] hover:bg-white/5 p-2 rounded-r-lg group">
+              <h4 className="text-white font-bold text-xl mb-1 group-hover:text-[#FACC15] transition-colors">
+                Creative Excellence
+              </h4>
+              <p className="text-sm text-zinc-500 group-hover:text-zinc-400">
+                Every project is crafted with meticulous attention to detail and
+                artistic vision.
+              </p>
             </div>
-
-            <p className="text-lg text-textMuted leading-relaxed">
-              {teamInfo.about}
-            </p>
-
-            <p className="text-lg text-textMuted leading-relaxed">
-              {teamInfo.mission}
-            </p>
-
-            {/* Stats Grid */}
-            <div className="grid grid-cols-2 gap-6 pt-8">
-              {teamInfo.stats.map((stat, index) => (
-                <div 
-                  key={index}
-                  className="bg-surface/50 backdrop-blur-sm border border-border rounded-lg p-6 hover:border-primary hover:box-glow-primary transition-all duration-300"
-                >
-                  <div className="text-3xl font-bold text-primary glow-primary mb-2">
-                    {stat.value}
-                  </div>
-                  <div className="text-sm text-textMuted uppercase tracking-wider font-mono">
-                    {stat.label}
-                  </div>
-                </div>
-              ))}
+            <div className="border-l-2 border-primary/30 pl-6 transition-all hover:border-[#FACC15] hover:bg-white/5 p-2 rounded-r-lg group">
+              <h4 className="text-white font-bold text-xl mb-1 group-hover:text-[#FACC15] transition-colors">
+                Innovation First
+              </h4>
+              <p className="text-sm text-zinc-500 group-hover:text-zinc-400">
+                We leverage the latest technology and AI to push creative
+                boundaries.
+              </p>
+            </div>
+            <div className="border-l-2 border-primary/30 pl-6 transition-all hover:border-[#FACC15] hover:bg-white/5 p-2 rounded-r-lg group">
+              <h4 className="text-white font-bold text-xl mb-1 group-hover:text-[#FACC15] transition-colors">
+                Client Focused
+              </h4>
+              <p className="text-sm text-zinc-500 group-hover:text-zinc-400">
+                Your story is our priority. We collaborate closely to bring your
+                vision to life.
+              </p>
             </div>
           </div>
-
-          {/* Right: Visual */}
-          <div className="relative">
-            {/* Main Image */}
-            <div className="relative rounded-lg overflow-hidden aspect-square">
-              <img
-                src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&q=80"
-                alt="Narratives Team"
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-tr from-primary-soft/20 via-primary/20 to-primary-dark/20"></div>
-            </div>
-
-            {/* Decorative Elements */}
-            <div className="absolute -top-8 -right-8 w-64 h-64 bg-primary/20 rounded-full blur-3xl box-glow-primary"></div>
-            <div className="absolute -bottom-8 -left-8 w-64 h-64 bg-primary-dark/20 rounded-full blur-3xl box-glow-primary"></div>
+        </div>
+        <div className="rightSide w-full md:w-[40%] flex place-items-end">
+          <div className=" rounded-lg overflow-hidden aspect-square">
+            <img
+              src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&q=80"
+              alt="Narratives Team"
+              className="w-full h-full object-cover"
+            />
           </div>
         </div>
-
-        {/* Values/Approach */}
-        <div className="mt-24 grid grid-cols-1 md:grid-cols-3 gap-8">
-          {[
-            {
-              title: 'Creative Excellence',
-              description: 'Every project is crafted with meticulous attention to detail and artistic vision.',
-            },
-            {
-              title: 'Innovation First',
-              description: 'We leverage the latest technology and AI to push creative boundaries.',
-            },
-            {
-              title: 'Client Focused',
-              description: 'Your story is our priority. We collaborate closely to bring your vision to life.',
-            }
-          ].map((value, index) => (
-            <div
-              key={index}
-              className="text-center space-y-4 p-6 rounded-lg bg-surface/30 border border-border hover:border-primary hover:box-glow-primary transition-all duration-300"
-            >
-              <div className='w-12 h-12 rounded-full mx-auto flex items-center justify-center bg-primary/10 box-glow-primary'>
-                <div className='w-6 h-6 rounded-full bg-primary'></div>
-              </div>
-              <h3 className='text-xl font-bold text-primary'>{value.title}</h3>
-              <p className="text-textMuted">{value.description}</p>
+      </div>
+      <div className="pt-10 flex flex-wrap gap-8 items-center justify-evenly">
+        {teamInfo.stats.map((stat, index) => (
+          <div key={index} className="hover:cursor-default ">
+            <div className="text-4xl font-bold text-white hover:text-[#facc15] transition-all duration-300">
+              {stat.value}
             </div>
-          ))}
-        </div>
+            <div className="text-white/65">{stat.label}</div>
+          </div>
+        ))}
       </div>
     </section>
   );

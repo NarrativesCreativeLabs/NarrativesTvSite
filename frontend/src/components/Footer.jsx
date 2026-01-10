@@ -10,11 +10,11 @@ const Footer = () => {
 
   return (
     <footer className="bg-background border-t border-border">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
           <div className="col-span-1 md:col-span-2">
-            <h3 className="text-2xl font-display font-bold text-primary glow-primary mb-4">
+            <h3 className="text-2xl font-display font-bold text-[#facc15] mb-4">
               NARRATIVES
             </h3>
             <p className="text-textMuted mb-4 max-w-md">
@@ -26,7 +26,7 @@ const Footer = () => {
                 <a
                   key={index}
                   href="#"
-                  className="w-10 h-10 rounded-full bg-surface border border-border hover:border-primary hover:bg-primary/10 hover:box-glow-primary flex items-center justify-center text-textMuted hover:text-primary transition-all duration-300"
+                  className="w-10 h-10 rounded-full bg-surface border border-border hover:border-[#facc15] hover:bg-primary/10 hover:box-glow-primary flex items-center justify-center text-textMuted hover:text-primary transition-all duration-300"
                 >
                   {letter}
                 </a>
@@ -49,7 +49,7 @@ const Footer = () => {
                         element.scrollIntoView({ behavior: 'smooth' });
                       }
                     }}
-                    className="text-textMuted hover:text-primary transition-colors duration-200"
+                    className="text-textMuted hover:text-[#facc15] transition-colors duration-200"
                   >
                     {link}
                   </button>
@@ -66,7 +66,7 @@ const Footer = () => {
             <ul className="space-y-2">
               {['Visual Stories', 'Music Videos', 'AI Stories', 'AI Automation'].map((service, index) => (
                 <li key={index}>
-                  <a href="#" className="text-textMuted hover:text-primary transition-colors duration-200">
+                  <a href="#" className="text-textMuted hover:text-[#facc15] transition-colors duration-200">
                     {service}
                   </a>
                 </li>
@@ -82,10 +82,10 @@ const Footer = () => {
           </p>
           
           <div className="flex gap-6 text-sm">
-            <a href="#" className="text-textMuted hover:text-primary transition-colors duration-200">
+            <a href="#" className="text-textMuted hover:text-[#facc15] transition-colors duration-200">
               Privacy Policy
             </a>
-            <a href="#" className="text-textMuted hover:text-primary transition-colors duration-200">
+            <a href="#" className="text-textMuted hover:text-[#facc15] transition-colors duration-200">
               Terms of Service
             </a>
           </div>

@@ -41,12 +41,12 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-24 bg-background">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="contact" className="py-24 bg-background border-t border-[#ffffff40]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
         {/* Section Header */}
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-display font-bold text-textMain">
-            Let's Create <span className="text-primary glow-primary">Together</span>
+            Let's Create <span className="text-[#facc15] shadow-sm">Together</span>
           </h2>
           <p className="text-xl text-textMuted max-w-3xl mx-auto">
             Have a project in mind? Get in touch and let's bring your story to life
@@ -141,8 +141,8 @@ const Contact = () => {
           {/* Contact Info */}
           <div className="space-y-8">
             <div>
-              <h3 className="text-2xl font-bold text-textMain mb-6">Get in Touch</h3>
-              <p className="text-textMuted leading-relaxed mb-8">
+              <h3 className="text-2xl font-bold text-white/90 mb-6">Get in Touch</h3>
+              <p className="text-white/65 leading-relaxed mb-8">
                 Ready to start your next project? Reach out to us through any of the channels below, 
                 or fill out the form and we'll get back to you within 24 hours.
               </p>
@@ -150,7 +150,7 @@ const Contact = () => {
 
             {/* Contact Details */}
             <div className="space-y-6">
-              <div className="flex items-start gap-4 p-4 rounded-lg bg-surface/50 border border-border hover:border-primary hover:box-glow-primary transition-all duration-300">
+              <div className="flex items-start gap-4 p-4 rounded-lg bg-surface/50 border border-border hover:border-[#facc15] hover:box-glow-primary transition-all duration-300">
                 <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
                   <Mail className="text-primary" size={24} />
                 </div>
@@ -162,7 +162,7 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="flex items-start gap-4 p-4 rounded-lg bg-surface/50 border border-border hover:border-primary hover:box-glow-primary transition-all duration-300">
+              <div className="flex items-start gap-4 p-4 rounded-lg bg-surface/50 border border-border hover:border-[#facc15] hover:box-glow-primary transition-all duration-300">
                 <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
                   <Phone className="text-primary" size={24} />
                 </div>
@@ -174,7 +174,7 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="flex items-start gap-4 p-4 rounded-lg bg-surface/50 border border-border hover:border-primary hover:box-glow-primary transition-all duration-300">
+              <div className="flex items-start gap-4 p-4 rounded-lg bg-surface/50 border border-border hover:border-[#facc15] hover:box-glow-primary transition-all duration-300">
                 <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
                   <MapPin className="text-primary" size={24} />
                 </div>
@@ -196,7 +196,7 @@ const Contact = () => {
                   <a
                     key={index}
                     href="#"
-                    className="w-12 h-12 rounded-lg bg-surface/50 border border-border hover:border-primary hover:bg-primary/10 hover:box-glow-primary flex items-center justify-center text-textMuted hover:text-primary transition-all duration-300"
+                    className="w-12 h-12 rounded-lg bg-surface/50 border border-border hover:border-[#facc15] hover:bg-primary/10 hover:box-glow-primary flex items-center justify-center text-textMuted hover:text-primary transition-all duration-300"
                   >
                     {platform.charAt(0)}
                   </a>
