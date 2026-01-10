@@ -3,15 +3,10 @@ import { ArrowRight, Play } from 'lucide-react';
 
 
 const Hero = () => {
-  const [isVisible, setVisible]= useState(true);
+  
   const videoRef = useRef(null);
 
-  useEffect(()=>{
-    const timer = setTimeout(() => {
-      setVisible(false);
-    }, 3000);
-    return () => clearTimeout(timer);
-  },[]);
+  
 
   useEffect(() => {
     if (videoRef.current) {
@@ -49,12 +44,7 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-surface via-background/90 to-background"></div>
       </div>
 
-      {/* Animated background elements with neon glow */}
-      {isVisible && (<div className="absolute inset-0 z-0">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-pulse box-glow-primary"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-primary-dark/20 rounded-full blur-3xl animate-pulse box-glow-primary" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-primary-soft/10 rounded-full blur-3xl animate-pulse box-glow-primary" style={{ animationDelay: '2s' }}></div>
-      </div>)}
+      
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-20">
@@ -69,43 +59,46 @@ const Hero = () => {
           <h1 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-textMain leading-tight">
             Crafting Stories
             <br />
-            <span className="text-primary">That Inspire</span>
+            {/* 🌟 Modern Multi-stop Gradient Text 🌟 */}
+            <span className="bg-gradient-to-r from-[#ffe100] via-[#FEF9C3] to-[#FEF9C3] bg-clip-text text-transparent bg-[length:200%_auto] animate-[shine_8s_ease-in-out_infinite]">
+              That Inspire
+            </span>
           </h1>
 
           {/* Subheadline */}
-          <p className="text-xl sm:text-2xl md:text-3xl text-textMuted max-w-3xl mx-auto font-light leading-relaxed">
-            We blend visual artistry with <span className="text-primary-soft shadow-[#FEF9C3] ">AI innovation</span> to create compelling narratives that captivate and transform.
+          <p className="text-xl sm:text-2xl md:text-3xl text-[#ffffffc8] max-w-4xl mx-auto font-light">
+            We blend visual artistry with <span className="text-primary-soft border-b border-[#f7cb7e] shadow-[#FEF9C3] ">AI innovation</span> to create compelling narratives that captivate and transform.
           </p>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8">
             <button
               onClick={scrollToContact}
-              className="cta-button bg-primary text-background border-primary hover:bg-primary-dark hover:border-primary-dark hover:box-glow-primary hover:scale-105 transition-all duration-300 flex items-center gap-2 group"
+              className="cta-button bg-gradient-to-r from-[#ffe100] to-[#FEF9C3] text-black font-bold transition-all duration-300 flex items-center gap-2 "
             >
               Start Your Story
-              <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform duration-300" />
+              <ArrowRight size={16} className="" />
             </button>
             <button
               onClick={scrollToPortfolio}
-              className="cta-button bg-transparent text-textMain border-primary hover:bg-primary hover:text-background hover:box-glow-primary transition-all duration-300 flex items-center gap-2 group"
+              className="cta-button bg-transparent text-textMain border border-[#ffffff6b] hover:border-[#ffbd4c] hover:box-glow-primary transition-all duration-300 flex items-center gap-2 group"
             >
-              <Play size={16} className="group-hover:scale-110 transition-transform duration-300" />
+              <Play size={16} className=" group-hover:text-[#ffbd4c] transition-transform duration-300" />
               View Our Work
             </button>
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-16 max-w-4xl mx-auto">
+          <div className="flex items-center justify-between">
             {[
               { value: '150+', label: 'Projects' },
               { value: '80+', label: 'Clients' },
               { value: '8+', label: 'Years' },
               { value: '25+', label: 'Awards' }
             ].map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-primary glow-primary mb-2">{stat.value}</div>
-                <div className="text-sm text-textMuted uppercase tracking-wider font-mono">{stat.label}</div>
+              <div key={index} className="text-center hover:cursor-default">
+                <div className="text-3xl md:text-4xl font-bold text-primary glow-primary mb-2 hover:text-[#ffbd4c] transition-all duration-300">{stat.value}</div>
+                <div className="text-sm text-[#ffffffb6] uppercase tracking-wider font-mono">{stat.label}</div>
               </div>
             ))}
           </div>
