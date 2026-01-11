@@ -59,5 +59,5 @@ This application is ready for deployment on any static site hosting service.
 
 Most modern hosting platforms (like Vercel, Netlify, or AWS Amplify) can be configured to do this automatically by setting:
 -   **Base Directory:** `frontend`
--   **Build Command:** `npm run build`
+-   **Build Command:** `pnpm run build`
 -   **Publish Directory:** `frontend/build`
