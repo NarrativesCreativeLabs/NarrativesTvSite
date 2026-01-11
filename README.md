@@ -53,7 +53,7 @@ This application is ready for deployment on any static site hosting service.
 1.  Build the application:
     ```sh
     cd frontend
-    npm run build
+    pnpm run build
     ```
 2.  Deploy the `frontend/build` directory to your hosting provider.
 
