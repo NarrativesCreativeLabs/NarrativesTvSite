@@ -29,7 +29,7 @@ const Header = () => {
           isMobileMenuOpen ? "bg-black/50 backdrop-blur-xl" : "bg-transparent"
         } fixed w-full z-50 transition-all duration-500 top-0 border-b ${
           isScrolled
-            ? " backdrop-blur-xl border-white/15 shadow-2xl"
+            ? " backdrop-blur-xl border-border shadow-2xl"
             : "bg-transparent border-transparent"
         }`}
       >
@@ -57,13 +57,13 @@ const Header = () => {
                     className="text-lg font-medium text-white/75 hover:text-white transition-colors relative group"
                   >
                     {item}
-                    <span className="absolute -bottom-1 py-[1px] left-0 w-0 h-px bg-gradient-to-r from-primary to-[#f59f0b] transition-all duration-300 group-hover:w-full"></span>
+                    <span className="absolute -bottom-1 py-[1px] left-0 w-0 h-px bg-gradient-to-r from-chart-2 to-chart-3 transition-all duration-300 group-hover:w-full"></span>
                   </a>
                 ))}
               </div>
             </div>
               <a href="#contact">
-                <span className="transition-all duration-300 px-5 py-2 bg-gradient-to-r from-primary to-[#f59f0b] rounded-full text-black/80 font-bold hover:shadow-[0_0_20px_-5px] hover:shadow-[#FEF9C3]">Lets talk</span>
+                <span className="transition-all duration-300 px-5 py-2 bg-gradient-to-r from-chart-1 to-chart-3 rounded-full text-black/80 font-bold hover:shadow-[0_0_20px_-5px] hover:shadow-chart-3">Lets talk</span>
               </a>
             </div>
 
@@ -84,13 +84,13 @@ const Header = () => {
         </div>
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden  border-b border-white/10  w-full">
+          <div className="md:hidden  border-b border-border  w-full">
             <div className="px-4 pt-2 pb-6 space-y-2 ">
               {["Services", "Work", "About", "Contact"].map((item) => (
                 <a
                   key={item}
                   href={`#${item.toLowerCase()}`}
-                  className="block px-3 py-4 rounded-lg text-lg font-medium text-[rgb(var(--text-muted))] hover:text-white hover:bg-white/5"
+                  className="block px-3 py-4 rounded-lg text-lg font-medium text-muted-foreground hover:text-white hover:bg-white/5"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {item}

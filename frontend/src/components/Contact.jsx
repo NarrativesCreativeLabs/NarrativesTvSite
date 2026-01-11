@@ -1,9 +1,20 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
-import { useToast } from '../hooks/use-toast';
+import { Mail, Phone, MapPin, Send, Instagram, Twitter, Linkedin, Youtube } from 'lucide-react';
+import { toast } from "sonner";
+
+import { contactDetails, socialLinks } from '../data/mockData';
+
+const iconComponents = {
+  Mail,
+  Phone,
+  MapPin,
+  Instagram,
+  Twitter,
+  Linkedin,
+  Youtube
+};
 
 const Contact = () => {
-  const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -26,8 +37,7 @@ const Contact = () => {
 
     // Simulate form submission
     setTimeout(() => {
-      toast({
-        title: "Message Sent!",
+      toast.success("Message Sent!", {
         description: "We'll get back to you within 24 hours.",
       });
       setFormData({
@@ -41,24 +51,24 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-24 bg-background border-t border-[#ffffff40]">
+    <section id="contact" className="py-12 bg-background border-t border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
         {/* Section Header */}
         <div className="text-center mb-16 space-y-4">
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-display font-bold text-textMain">
-            Let's Create <span className="text-[#facc15] shadow-sm">Together</span>
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-display font-bold text-foreground">
+            Let's Create <span className="text-primary shadow-sm">Together</span>
           </h2>
-          <p className="text-xl text-textMuted max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Have a project in mind? Get in touch and let's bring your story to life
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Form */}
-          <div className="bg-surface/50 backdrop-blur-sm border border-border rounded-lg p-8">
+          <div className="bg-card/50 backdrop-blur-sm border border-border rounded-lg p-8">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-mono uppercase tracking-wider text-textMuted mb-2">
+                <label htmlFor="name" className="block text-sm font-mono uppercase tracking-wider text-muted-foreground mb-2">
                   Your Name
                 </label>
                 <input
@@ -68,13 +78,13 @@ const Contact = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-background border border-border rounded-lg text-textMain focus:outline-none focus:border-primary focus:box-glow-primary transition-all duration-200"
+                  className="w-full px-4 py-3 bg-background border border-border rounded-lg text-foreground focus:outline-none focus:border-primary focus:box-glow-primary transition-all duration-200"
                   placeholder="John Doe"
                 />
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-mono uppercase tracking-wider text-textMuted mb-2">
+                <label htmlFor="email" className="block text-sm font-mono uppercase tracking-wider text-muted-foreground mb-2">
                   Email Address
                 </label>
                 <input
@@ -84,13 +94,13 @@ const Contact = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-background border border-border rounded-lg text-textMain focus:outline-none focus:border-primary focus:box-glow-primary transition-all duration-200"
+                  className="w-full px-4 py-3 bg-background border border-border rounded-lg text-foreground focus:outline-none focus:border-primary focus:box-glow-primary transition-all duration-200"
                   placeholder="john@example.com"
                 />
               </div>
 
               <div>
-                <label htmlFor="subject" className="block text-sm font-mono uppercase tracking-wider text-textMuted mb-2">
+                <label htmlFor="subject" className="block text-sm font-mono uppercase tracking-wider text-muted-foreground mb-2">
                   Subject
                 </label>
                 <input
@@ -100,13 +110,13 @@ const Contact = () => {
                   value={formData.subject}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-background border border-border rounded-lg text-textMain focus:outline-none focus:border-primary focus:box-glow-primary transition-all duration-200"
+                  className="w-full px-4 py-3 bg-background border border-border rounded-lg text-foreground focus:outline-none focus:border-primary focus:box-glow-primary transition-all duration-200"
                   placeholder="Project Inquiry"
                 />
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-mono uppercase tracking-wider text-textMuted mb-2">
+                <label htmlFor="message" className="block text-sm font-mono uppercase tracking-wider text-muted-foreground mb-2">
                   Message
                 </label>
                 <textarea
@@ -116,7 +126,7 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   rows="5"
-                  className="w-full px-4 py-3 bg-background border border-border rounded-lg text-textMain focus:outline-none focus:border-primary transition-colors duration-200 resize-none"
+                  className="w-full px-4 py-3 bg-background border border-border rounded-lg text-foreground focus:outline-none focus:border-primary transition-colors duration-200 resize-none"
                   placeholder="Tell us about your project..."
                 ></textarea>
               </div>
@@ -124,7 +134,7 @@ const Contact = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full cta-button bg-primary text-background border-primary hover:bg-primary-dark hover:border-primary-dark hover:box-glow-primary hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full cta-button bg-linear-to-r from-primary via-chart-3 to-chart-5 text-black font-boldackground border-primary hover:border-primary hover:box-glow-primary hover:-translate-y-0.5 transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isSubmitting ? (
                   <>Sending...</>
@@ -150,57 +160,47 @@ const Contact = () => {
 
             {/* Contact Details */}
             <div className="space-y-6">
-              <div className="flex items-start gap-4 p-4 rounded-lg bg-surface/50 border border-border hover:border-[#facc15] hover:box-glow-primary transition-all duration-300">
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <Mail className="text-primary" size={24} />
-                </div>
-                <div>
-                  <h4 className="text-textMain font-bold mb-1">Email</h4>
-                  <a href="mailto:hello@narratives.studio" className="text-textMuted hover:text-primary transition-colors duration-200">
-                    hello@narratives.studio
-                  </a>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4 p-4 rounded-lg bg-surface/50 border border-border hover:border-[#facc15] hover:box-glow-primary transition-all duration-300">
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <Phone className="text-primary" size={24} />
-                </div>
-                <div>
-                  <h4 className="text-textMain font-bold mb-1">Phone</h4>
-                  <a href="tel:+1234567890" className="text-textMuted hover:text-primary transition-colors duration-200">
-                    +1 (234) 567-8900
-                  </a>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4 p-4 rounded-lg bg-surface/50 border border-border hover:border-[#facc15] hover:box-glow-primary transition-all duration-300">
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <MapPin className="text-primary" size={24} />
-                </div>
-                <div>
-                  <h4 className="text-textMain font-bold mb-1">Location</h4>
-                  <p className="text-textMuted">
-                    123 Creative Street<br />
-                    San Francisco, CA 94102
-                  </p>
-                </div>
-              </div>
+              {contactDetails.map((detail, index) => {
+                const Icon = iconComponents[detail.icon];
+                return (
+                  <div key={index} className="flex items-start gap-4 p-4 rounded-lg bg-card/50 border border-border hover:border-primary hover:box-glow-primary transition-all duration-300">
+                    <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                      {Icon && <Icon className="text-primary" size={24} />}
+                    </div>
+                    <div>
+                      <h4 className="text-foreground font-bold mb-1">{detail.title}</h4>
+                      {detail.href ? (
+                        <a href={detail.href} className="text-muted-foreground hover:text-primary transition-colors duration-200">
+                          {detail.value}
+                        </a>
+                      ) : (
+                        <p className="text-muted-foreground whitespace-pre-line">{detail.value}</p>
+                      )}
+                    </div>
+                  </div>
+                );
+              })}
             </div>
 
-            {/* Social Links Placeholder */}
+            {/* Social Links */}
             <div className="pt-8">
-              <h4 className="text-textMain font-bold mb-4">Follow Us</h4>
+              <h4 className="text-foreground font-bold mb-4">Follow Us</h4>
               <div className="flex gap-4">
-                {['Instagram', 'Twitter', 'LinkedIn', 'YouTube'].map((platform, index) => (
-                  <a
-                    key={index}
-                    href="#"
-                    className="w-12 h-12 rounded-lg bg-surface/50 border border-border hover:border-[#facc15] hover:bg-primary/10 hover:box-glow-primary flex items-center justify-center text-textMuted hover:text-primary transition-all duration-300"
-                  >
-                    {platform.charAt(0)}
-                  </a>
-                ))}
+                {socialLinks.map((link, index) => {
+                  const Icon = iconComponents[link.icon];
+                  return (
+                    <a
+                      key={index}
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={link.name}
+                      className="w-12 h-12 rounded-lg bg-card/50 border border-border hover:border-primary hover:bg-primary/10 hover:box-glow-primary flex items-center justify-center text-muted-foreground hover:text-primary transition-all duration-300"
+                    >
+                      {Icon && <Icon size={20} />}
+                    </a>
+                  );
+                })}
               </div>
             </div>
           </div>

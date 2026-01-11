@@ -41,7 +41,7 @@ const Hero = () => {
         >
           <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-gradient-to-b from-surface via-background/90 to-background"></div>
+        <div className="absolute inset-0 bg-background/30"></div>
       </div>
 
       
@@ -56,34 +56,34 @@ const Hero = () => {
           </div>
 
           {/* Main Headline */}
-          <h1 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-textMain leading-tight">
+          <h1 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-foreground leading-tight">
             Crafting Stories
             <br />
             {/* 🌟 Modern Multi-stop Gradient Text 🌟 */}
-            <span className="bg-gradient-to-r from-[#ffe100] via-[#FEF9C3] to-[#FEF9C3] bg-clip-text text-transparent bg-[length:200%_auto] animate-[shine_8s_ease-in-out_infinite]">
+            <span className="bg-gradient-to-r from-chart-1 via-chart-3 to-chart-5 bg-clip-text text-transparent bg-size[200%_auto] animate-[shine_8s_ease-in-out_infinite]">
               That Inspire
             </span>
           </h1>
 
           {/* Subheadline */}
-          <p className="text-xl sm:text-2xl md:text-3xl text-[#ffffffc8] max-w-4xl mx-auto font-light">
-            We blend visual artistry with <span className="text-primary-soft border-b border-[#f7cb7e] shadow-[#FEF9C3] ">AI innovation</span> to create compelling narratives that captivate and transform.
+          <p className="text-xl sm:text-2xl md:text-3xl text-white/80 max-w-4xl mx-auto font-light">
+            We blend visual artistry with <span className="text-primary border-b border-primary/50 shadow-chart-3 ">AI innovation</span> to create compelling narratives that captivate and transform.
           </p>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8">
             <button
               onClick={scrollToContact}
-              className="cta-button bg-gradient-to-r from-[#ffe100] to-[#FEF9C3] text-black font-bold transition-all duration-300 flex items-center gap-2 "
+              className="cta-button bg-linear-to-r from-primary to-chart-5 text-black font-bold transition-all duration-300 flex items-center gap-2 "
             >
               Start Your Story
               <ArrowRight size={16} className="" />
             </button>
             <button
               onClick={scrollToPortfolio}
-              className="cta-button bg-transparent text-textMain border border-[#ffffff6b] hover:border-[#ffbd4c] hover:box-glow-primary transition-all duration-300 flex items-center gap-2 group"
+              className="cta-button bg-transparent hover:text-chart-2 text-foreground border border-white/40 hover:border-chart-2 hover:box-glow-primary transition-all duration-300 flex items-center gap-2 group"
             >
-              <Play size={16} className=" group-hover:text-[#ffbd4c] transition-transform duration-300" />
+              <Play size={16} className=" group-hover:text-chart-2 transition-transform duration-300" />
               View Our Work
             </button>
           </div>
@@ -97,8 +97,8 @@ const Hero = () => {
               { value: '25+', label: 'Awards' }
             ].map((stat, index) => (
               <div key={index} className="text-center hover:cursor-default">
-                <div className="text-3xl md:text-4xl font-bold text-primary glow-primary mb-2 hover:text-[#ffbd4c] transition-all duration-300">{stat.value}</div>
-                <div className="text-sm text-[#ffffffb6] uppercase tracking-wider font-mono">{stat.label}</div>
+                <div className="text-3xl md:text-4xl font-bold text-primary glow-primary mb-2 hover:text-chart-2 transition-all duration-300">{stat.value}</div>
+                <div className="text-sm text-white/70 uppercase tracking-wider font-mono">{stat.label}</div>
               </div>
             ))}
           </div>

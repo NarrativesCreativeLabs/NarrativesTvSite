@@ -6,21 +6,21 @@ const Portfolio = () => {
   const [selectedVideo, setSelectedVideo] = useState(null);
   const [filter, setFilter] = useState('All');
 
-  const categories = ['All', 'Visual Stories', 'Music Videos', 'AI Stories'];
+  const categories = ['All', 'Brand Storytelling', 'Music Videos', 'AI Stories'];
 
   const filteredVideos = filter === 'All' 
     ? portfolioVideos 
     : portfolioVideos.filter(video => video.tags.includes(filter));
 
   return (
-    <section id="portfolio" className="py-24 pt-10 border-t border-[#ffffff40] g-gradient-to-b from-background via-surface/10 to-background">
+    <section id="portfolio" className="py-24 pt-10 border-y border-border g-gradient-to-b from-background via-card/10 to-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
         {/* Section Header */}
         <div className="text-center mb-12 space-y-4">
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-display font-bold text-textMain">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-display font-bold text-foreground">
             Our <span className="text-primary glow-primary">Portfolio</span>
           </h2>
-          <p className="text-xl text-textMuted max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Explore our collection of captivating visual stories and creative projects
           </p>
         </div>
@@ -33,8 +33,8 @@ const Portfolio = () => {
               onClick={() => setFilter(category)}
               className={`px-6 py-2 rounded-full font-mono text-sm uppercase tracking-wider transition-all duration-300 ${
                 filter === category
-                  ? 'bg-primary text-background border border-[#facc15] box-glow-primary'
-                  : 'bg-transparent text-textMuted border border-border hover:border-[#facc15] hover:bg-[#facc15text-primary'
+                  ? 'bg-primary text-background border border-primary box-glow-primary'
+                  : 'bg-transparent text-muted-foreground border border-border hover:border-primary hover:text-primary'
               }`}
             >
               {category}
@@ -47,7 +47,7 @@ const Portfolio = () => {
           {filteredVideos.map((video, index) => (
             <div
               key={video.id}
-              className="group rounded-xl relative aspect-[4/3] overflow-hidden cursor-pointer bg-black border border-white/5 hover:border-[rgba(var(--primary),0.3)] transition-colors duration-500"
+              className="group rounded-lg relative aspect-[4/3] overflow-hidden cursor-pointer bg-black border border-white/5 hover:border-[rgba(var(--primary),0.3)] transition-colors duration-500"
               style={{ animationDelay: `${index * 100}ms` }}
               onClick={() => setSelectedVideo(video)}
             >
@@ -60,19 +60,16 @@ const Portfolio = () => {
 
               {/* Overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                <div className="text-center space-y-4">
-                  <div className="w-16 h-16 rounded-full bg-primary/70 backdrop-blur-sm flex items-center justify-center mx-auto transform group-hover:scale-110 transition-transform duration-300 box-glow-primary">
+                <div className="w-16 h-16 rounded-full bg-primary/70 backdrop-blur-sm flex items-center justify-center mx-auto transform group-hover:scale-110 transition-transform duration-300 box-glow-primary">
                     <Play size={28} className="text-background ml-1" />
                   </div>
                   
                 </div>
-              </div>
-
               {/* Category Badge */}
               <div className="absolute bottom-0 left-0 p-8 w-full">
                   <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 ease-out">
-                    <span className="text-[#facc15] text-s font-bold uppercase tracking-wider mb-2 block">{video.category}</span>
-                    <h3 className="text-2xl font-bold text-white group-hover:text-[#fff3c2] transition-colors">{video.title}</h3>
+                    <span className="text-primary text-s font-bold uppercase tracking-wider mb-2 block">{video.category}</span>
+                    <h3 className="text-2xl font-bold text-white group-hover:text-chart-5 transition-colors">{video.title}</h3>
                   </div>
                   <div className="h-1 w-0 bg-primary mt-4 transition-all duration-500 group-hover:w-36"></div>
                 </div>
@@ -93,13 +90,13 @@ const Portfolio = () => {
               {/* Close Button */}
               <button
                 onClick={() => setSelectedVideo(null)}
-                className="absolute -top-12 right-0 text-textMain hover:text-primary transition-colors duration-200"
+                className="absolute -top-12 right-0 text-foreground hover:text-primary transition-colors duration-200"
               >
                 <X size={32} />
               </button>
 
               {/* Video Player */}
-              <div className="aspect-video rounded-lg overflow-hidden border-2 border-[#facc15] box-glow-[#facc15]">
+              <div className="aspect-video rounded-lg overflow-hidden border-2 border-primary box-glow-primary">
                 <video
                   controls
                   autoPlay
@@ -111,8 +108,8 @@ const Portfolio = () => {
 
               {/* Video Info */}
               <div className="mt-6 text-center">
-                <h3 className="text-2xl font-bold text-textMain mb-2 glow-primary">{selectedVideo.title}</h3>
-                <p className="text-textMuted">{selectedVideo.category}</p>
+                <h3 className="text-2xl font-bold text-foreground mb-2 glow-primary">{selectedVideo.title}</h3>
+                <p className="text-muted-foreground">{selectedVideo.category}</p>
               </div>
             </div>
           </div>

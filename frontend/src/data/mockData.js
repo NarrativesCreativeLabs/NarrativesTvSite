@@ -1,9 +1,52 @@
+export const contactDetails = [
+  {
+    icon: 'Mail',
+    title: 'Email',
+    value: 'business@narratives.tv',
+    href: 'mailto:business@narratives.tv'
+  },
+  {
+    icon: 'Phone',
+    title: 'Phone',
+    value: '+1 (234) 567-8900',
+    href: 'tel:+1234567890'
+  },
+  {
+    icon: 'MapPin',
+    title: 'Location',
+    value: '123 Creative Street San Francisco, CA 94102',
+  }
+];
+
+export const socialLinks = [
+  {
+    name: 'Instagram',
+    href: '#',
+    icon: 'Instagram' 
+  },
+  {
+    name: 'Twitter',
+    href: '#',
+    icon: 'Twitter'
+  },
+  {
+    name: 'LinkedIn',
+    href: '#',
+    icon: 'Linkedin'
+  },
+  {
+    name: 'YouTube',
+    href: '#',
+    icon: 'Youtube'
+  }
+];
+
 // Mock data for Narratives website
 
 export const services = [
   {
     id: 1,
-    title: "Visual Stories",
+    title: "Brand Storytelling",
     description: "Captivating visual narratives that inspire and educate your audience through compelling imagery and storytelling.",
     icon: "Film",
     color: "neon-orange"
@@ -17,7 +60,7 @@ export const services = [
   },
   {
     id: 3,
-    title: "AI Stories",
+    title: "Originals",
     description: "Cutting-edge AI-powered storytelling that pushes the boundaries of creativity and imagination.",
     icon: "Sparkles",
     color: "neon-orange"
@@ -35,10 +78,10 @@ export const portfolioVideos = [
   {
     id: 1,
     title: "Urban Dreams",
-    category: "Visual Story",
+    category: "Brand Storytelling",
     thumbnail: "https://images.unsplash.com/photo-1536240478700-b869070f9279?w=800&q=80",
     videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
-    tags: ["Visual Stories"]
+    tags: ["Brand Storytelling"]
   },
   {
     id: 2,
@@ -59,10 +102,10 @@ export const portfolioVideos = [
   {
     id: 4,
     title: "Neon Nights",
-    category: "Visual Story",
+    category: "Brand Storytelling",
     thumbnail: "https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?w=800&q=80",
     videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
-    tags: ["Visual Stories"]
+    tags: ["Brand Storytelling"]
   },
   {
     id: 5,
@@ -90,5 +133,10 @@ export const teamInfo = {
     { label: "Happy Clients", value: "80+" },
     { label: "Years Experience", value: "8+" },
     { label: "Awards Won", value: "25+" }
+  ],
+  specials:[
+    {title: "Creative Excellence", description: "Every project is crafted with meticulous attention to detail and artistic vision." },
+    {title: "Innovation First", description: "We leverage the latest technology and AI to push creative boundaries." },
+    {title: "Client Focused", description: "Your story is our priority. We collaborate closely to bring your vision to life." }
   ]
 };
