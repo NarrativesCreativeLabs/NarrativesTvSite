@@ -11,15 +11,15 @@ const iconMap = {
 
 const Services = () => {
   return (
-    <section id="services" className="py-24 bg-gradient-to-b from-black via-dark-purple/20 to-black">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="services" className="py-10  border-t border-border bg-gradient-to-b from-background via-card/20 to-background">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
         {/* Section Header */}
         <div className="text-center mb-16 space-y-4">
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-display font-bold text-white">
-            Our <span className="text-neon-orange glow-orange">Services</span>
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-display font-bold text-foreground">
+            Our <span className="text-primary glow-primary">Services</span>
           </h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            From visual storytelling to <span className="text-neon-blue">AI automation</span>, we bring your creative vision to life with cutting-edge technology
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            From visual storytelling to <span className="text-primary">AI automation</span>, we bring your creative vision to life with cutting-edge technology
           </p>
         </div>
 
@@ -27,43 +27,46 @@ const Services = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((service, index) => {
             const IconComponent = iconMap[service.icon];
-            const isOrange = index % 2 === 0;
             
             return (
               <div
                 key={service.id}
-                className="group relative bg-dark-navy/50 backdrop-blur-sm border border-gray-800 rounded-lg p-8 hover:border-neon-orange transition-all duration-300 hover:transform hover:scale-105 hover:box-glow-orange select-none"
+                className="group relative bg-card border border-border rounded-lg p-8 hover:border-primary/40 transition-all duration-300 hover:transform select-none"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
+                <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent  opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
                 {/* Icon */}
-                <div className={`w-16 h-16 rounded-lg ${isOrange ? 'bg-neon-orange/10' : 'bg-neon-blue/10'} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 ${isOrange ? 'group-hover:box-glow-orange' : 'group-hover:box-glow-blue'}`}>
+                <div className='flex md:flex-col md:place-items-start md:gap-0 items-center justify-start gap-6'>
+                <div className='p-2 md:p-3 rounded-sm bg-black flex items-center justify-center mb-6 group-hover:scale-110 transition-all duration-300 group-hover:border-primary/60 border-[1px] border-border group-hover:box-glow-primary'>
                   <IconComponent 
                     size={32} 
-                    className={isOrange ? 'text-neon-orange' : 'text-neon-blue'}
+                    className='text-primary'
                   />
+                  
                 </div>
 
                 {/* Content */}
-                <h3 className={`text-2xl font-bold text-white mb-4 transition-colors duration-300 ${isOrange ? 'group-hover:text-neon-orange group-hover:glow-orange' : 'group-hover:text-neon-blue group-hover:glow-blue'}`}>
+                <h3 className='text-2xl translate-x-0 group-hover:translate-x-4 font-bold text-foreground mb-4 transition-all duration-300 group-hover:text-primary group-hover:glow-primary'>
                   {service.title}
                 </h3>
-                <p className="text-gray-400 leading-relaxed">
+                </div>
+                <p className="text-muted-foreground leading-relaxed">
                   {service.description}
                 </p>
 
                 {/* Hover Effect */}
-                <div className={`absolute inset-0 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none ${isOrange ? 'bg-gradient-to-br from-neon-orange/5 to-transparent' : 'bg-gradient-to-br from-neon-blue/5 to-transparent'}`}></div>
+                <div className='absolute inset-0 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none bg-gradient-to-br from-primary/5 to-transparent'></div>
               </div>
             );
           })}
         </div>
 
         {/* Bottom CTA */}
-        <div className="text-center mt-16">
-          <p className="text-gray-400 mb-6">Ready to bring your vision to life?</p>
+        <div className="text-center flex flex-col items-center mt-16">
+          <p className="text-muted-foreground mb-6">Ready to bring your vision to life?</p>
           <button
             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-            className="cta-button bg-neon-orange text-black border-neon-orange hover:bg-fluorescent-orange hover:border-fluorescent-orange hover:box-glow-orange hover:scale-105 transition-all duration-300"
+            className="cta-button  border-border border hover:border-primary hover:text-primary hover:-translate-y-0.5 transition-all duration-300"
           >
             Let's Collaborate
           </button>

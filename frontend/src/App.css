@@ -1,11 +1,7 @@
-/* Narratives Brand Styles - Neon Cyberpunk Theme */
+/* Narratives Brand Styles - Neon Golden Theme */
 
 /* Navigation Links */
 .nav-link {
-  font-family: 'Inter', sans-serif;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
   text-decoration: none;
   padding: 0;
   border-radius: 0;
@@ -14,38 +10,36 @@
 }
 
 .nav-link:hover {
-  text-shadow: 0 0 10px currentColor;
+  text-shadow: 0 0 10px var(--primary);
 }
 
 .nav-link:focus {
-  outline: 2px solid #FF6B00;
+  outline: 2px solid var(--primary);
   outline-offset: 2px;
 }
 
 /* CTA Buttons with Neon Glow */
 .cta-button {
   border-radius: 9999px;
-  padding: 0.625rem 1.375rem;
-  font-family: 'Inter', sans-serif;
+  padding: 1rem 1.375rem;
   font-size: 0.75rem;
-  font-weight: 500;
-  line-height: 1;
+  
+  
   letter-spacing: 0.0875em;
   text-transform: uppercase;
   transition: all 0.3s ease;
   cursor: pointer;
   min-height: 44px;
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  border-width: 2px;
-  position: relative;
+  
 }
 
 .cta-button:hover {
-  box-shadow: 0 0 20px currentColor, 0 0 40px currentColor, 0 0 60px rgba(255, 107, 0, 0.3);
-  transform: translateY(-2px);
+  
+  transform: translateY(-3px);
 }
 
 .cta-button:active {
@@ -84,14 +78,14 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background: #000;
+  background: #00000000;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #FF6B35;
+  background: var(--chart-4);
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #00D9FF;
+  background: var(--ring);
 }
