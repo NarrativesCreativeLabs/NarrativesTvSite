@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { ArrowRight, Play } from 'lucide-react';
-
+import ReactPlayer from 'react-player'
 
 const Hero = () => {
   
@@ -27,21 +27,30 @@ const Hero = () => {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   };
-
+  const videoId = 674688232;
+  
   return (
     <section id="hero" className="relative pb-5 min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Video */}
-      <div className="absolute inset-0 z-0">
-        <video
-          ref={videoRef}
-          className="w-full h-full object-cover opacity-30"
-          loop
-          muted
-          playsInline
-        >
-          <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4" />
-        </video>
-        <div className="absolute inset-0 bg-background/30"></div>
+      
+      <div className='absolute top-0 l-0 w-full h-screen pointer-events-none' >
+        <iframe
+          src={`https://player.vimeo.com/video/${videoId}?background=1&autopause=0`}
+          frameBorder="0"
+          allow="autoplay; fullscreen"
+          className='opacity-30'
+          style={{
+            width: '100vw',
+            height: '56.25vw', /* 16:9 Aspect Ratio */
+            minHeight: '100vh',
+            minWidth: '177.77vh', /* 16:9 Aspect Ratio */
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+          }}
+          title="Hero Video Background"
+        ></iframe>
       </div>
 
       

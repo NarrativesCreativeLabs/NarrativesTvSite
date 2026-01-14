@@ -79,48 +79,66 @@ export const portfolioVideos = [
     id: 1,
     title: "Urban Dreams",
     category: "Brand Storytelling",
-    thumbnail: "https://images.unsplash.com/photo-1536240478700-b869070f9279?w=800&q=80",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+    videoUrl: "https://vimeo.com/671573909",
     tags: ["Brand Storytelling"]
   },
   {
     id: 2,
-    title: "Electric Pulse",
-    category: "Music Video",
-    thumbnail: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=800&q=80",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+    title: "Anniversary",
+    category: "Car Video",
+    videoUrl: "https://vimeo.com/671574115",
     tags: ["Music Videos"]
   },
   {
     id: 3,
     title: "Future Visions",
     category: "AI Story",
-    thumbnail: "https://images.unsplash.com/photo-1535016120720-40c646be5580?w=800&q=80",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
-    tags: ["AI Stories"]
+    
+    videoUrl: "https://vimeo.com/749406711",
+    tags: ["Al Nahdi Wazen Campaign"]
   },
   {
     id: 4,
-    title: "Neon Nights",
+    title: "B Fit",
     category: "Brand Storytelling",
-    thumbnail: "https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?w=800&q=80",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
+    
+    videoUrl: "https://vimeo.com/534967674",
     tags: ["Brand Storytelling"]
   },
   {
     id: 5,
-    title: "Rhythm & Light",
+    title: "REDF Saudi National Day",
     category: "Music Video",
-    thumbnail: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=800&q=80",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4",
+    
+    videoUrl: "hhttps://vimeo.com/630383745",
     tags: ["Music Videos"]
   },
   {
     id: 6,
-    title: "Digital Horizons",
+    title: "Jeddha Central District",
     category: "AI Story",
-    thumbnail: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
+    videoUrl: "https://vimeo.com/676934814",
+    tags: ["AI Stories"]
+  },
+  {
+    id: 7,
+    title: "Al-Nahdi Ramadan",
+    category: "AI Story",
+    videoUrl: "https://vimeo.com/535928834",
+    tags: ["AI Stories"]
+  },
+  {
+    id: 8,
+    title: "Savola Saudi National Day",
+    category: "Music Video",
+    videoUrl: "https://vimeo.com/631005356",
+    tags: ["Music Videos"]
+  },
+  {
+    id: 9,
+    title: "Masar City Central",
+    category: "AI Story",
+    videoUrl: "https://vimeo.com/671996824",
     tags: ["AI Stories"]
   }
 ];
