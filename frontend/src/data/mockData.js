@@ -85,14 +85,14 @@ export const portfolioVideos = [
   {
     id: 2,
     title: "Anniversary",
-    category: "Car Video",
+    category: "Brand Storytelling",
     videoUrl: "https://vimeo.com/671574115",
-    tags: ["Music Videos"]
+    tags: ["Brand Storytelling"]
   },
   {
     id: 3,
     title: "Future Visions",
-    category: "AI Story",
+    category: "Originals",
     
     videoUrl: "https://vimeo.com/749406711",
     tags: ["Al Nahdi Wazen Campaign"]
@@ -110,22 +110,22 @@ export const portfolioVideos = [
     title: "REDF Saudi National Day",
     category: "Music Video",
     
-    videoUrl: "hhttps://vimeo.com/630383745",
+    videoUrl: "https://vimeo.com/630383745",
     tags: ["Music Videos"]
   },
   {
     id: 6,
     title: "Jeddha Central District",
-    category: "AI Story",
+    category: "Originals",
     videoUrl: "https://vimeo.com/676934814",
-    tags: ["AI Stories"]
+    tags: ["Originals"]
   },
   {
     id: 7,
     title: "Al-Nahdi Ramadan",
-    category: "AI Story",
+    category: "Originals",
     videoUrl: "https://vimeo.com/535928834",
-    tags: ["AI Stories"]
+    tags: ["Originals"]
   },
   {
     id: 8,
@@ -137,9 +137,9 @@ export const portfolioVideos = [
   {
     id: 9,
     title: "Masar City Central",
-    category: "AI Story",
+    category: "Originals",
     videoUrl: "https://vimeo.com/671996824",
-    tags: ["AI Stories"]
+    tags: ["Originals"]
   }
 ];
 

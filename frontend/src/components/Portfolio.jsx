@@ -11,7 +11,7 @@ const Portfolio = () => {
     "All",
     "Brand Storytelling",
     "Music Videos",
-    "AI Stories",
+    "Originals",
   ];
 
   const filteredVideos =
@@ -26,6 +26,19 @@ const Portfolio = () => {
   const getVimeoId = (url) => {
     const parts = url.split("/");
     return parts[parts.length - 1];
+  };
+
+  const handleMouseEnter = () => {
+    // Preconnect to Vimeo's player and CDN to warm up the connection
+    const playerPreconnect = document.createElement('link');
+    playerPreconnect.rel = 'preconnect';
+    playerPreconnect.href = 'https://player.vimeo.com';
+    document.head.appendChild(playerPreconnect);
+
+    const cdnPreconnect = document.createElement('link');
+    cdnPreconnect.rel = 'preconnect';
+    cdnPreconnect.href = 'https://i.vimeocdn.com';
+    document.head.appendChild(cdnPreconnect);
   };
 
   return (
@@ -70,6 +83,7 @@ const Portfolio = () => {
               className="group rounded-lg relative aspect-[4/3] overflow-hidden cursor-pointer bg-black border border-white/5 hover:border-[rgba(var(--primary),0.3)] transition-colors duration-500"
               style={{ animationDelay: `${index * 100}ms` }}
               onClick={() => setSelectedVideo(video)}
+              onMouseEnter={handleMouseEnter}
             >
               <VimeoThumbnail
                 videoUrl={video.videoUrl}

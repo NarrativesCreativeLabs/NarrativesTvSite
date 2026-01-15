@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import logo from "../assets/logo.png";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -37,33 +38,35 @@ const Header = () => {
           <div className="flex items-center justify-between h-24">
             {/* Logo */}
             <div className="flex items-center gap-3 cursor-pointer group">
+              <div className="navbar-logo overflow-hidden h-12 w-12 rounded-sm">
+                <img src={logo} alt="Company Logo" />
+              </div>
               <span className="font-bold text-3xl tracking-tight text-white">
                 Narratives
               </span>
             </div>
 
-            
-            
-
             {/* CTA Button */}
             <div className="hidden md:flex gap-7 items-center ">
               {/* Desktop Menu */}
               <div className="hidden md:block">
-              <div className="ml-10 flex items-baseline space-x-10">
-                {["Services", "Work", "About"].map((item) => (
-                  <a
-                    key={item}
-                    href={`#${item.toLowerCase()}`}
-                    className="text-lg font-medium text-white/75 hover:text-white transition-colors relative group"
-                  >
-                    {item}
-                    <span className="absolute -bottom-1 py-[1px] left-0 w-0 h-px bg-gradient-to-r from-chart-2 to-chart-3 transition-all duration-300 group-hover:w-full"></span>
-                  </a>
-                ))}
+                <div className="ml-10 flex items-baseline space-x-10">
+                  {["Services", "Work", "About"].map((item) => (
+                    <a
+                      key={item}
+                      href={`#${item.toLowerCase()}`}
+                      className="text-lg font-medium text-white/75 hover:text-white transition-colors relative group"
+                    >
+                      {item}
+                      <span className="absolute -bottom-1 py-[1px] left-0 w-0 h-px bg-gradient-to-r from-chart-2 to-chart-3 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                  ))}
+                </div>
               </div>
-            </div>
               <a href="#contact">
-                <span className="transition-all duration-300 px-5 py-2 bg-gradient-to-r from-chart-1 to-chart-3 rounded-full text-black/80 font-bold hover:shadow-[0_0_20px_-5px] hover:shadow-chart-3">Lets talk</span>
+                <span className="transition-all duration-300 px-5 py-2 bg-gradient-to-r from-chart-1 to-chart-3 rounded-full text-black/80 font-bold hover:shadow-[0_0_20px_-5px] hover:shadow-chart-3">
+                  Lets talk
+                </span>
               </a>
             </div>
 
@@ -96,7 +99,6 @@ const Header = () => {
                   {item}
                 </a>
               ))}
-            
             </div>
           </div>
         )}

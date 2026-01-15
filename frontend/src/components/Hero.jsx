@@ -38,6 +38,7 @@ const Hero = () => {
           src={`https://player.vimeo.com/video/${videoId}?background=1&autopause=0`}
           frameBorder="0"
           allow="autoplay; fullscreen"
+          loading="lazy"
           className='opacity-30'
           style={{
             width: '100vw',
