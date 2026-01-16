@@ -28,22 +28,28 @@ const Header = () => {
       <nav
         className={`${
           isMobileMenuOpen ? "bg-black/50 backdrop-blur-xl" : "bg-transparent"
-        } fixed w-full z-50 transition-all duration-500 top-0 border-b ${
-          isScrolled
+          } fixed w-full z-50 transition-all duration-500 top-0 border-b 
+          ${isScrolled
             ? " backdrop-blur-xl border-border shadow-2xl"
             : "bg-transparent border-transparent"
-        }`}
-      >
+          }
+        `}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
           <div className="flex items-center justify-between h-24">
             {/* Logo */}
             <div className="flex items-center gap-3 cursor-pointer group">
-              <div className="navbar-logo overflow-hidden h-12 w-12 rounded-sm">
+              <div className="navbar-logo overflow-hidden h-18 w-18 rounded-sm">
                 <img src={logo} alt="Company Logo" />
               </div>
-              <span className="font-bold text-3xl tracking-tight text-white">
-                Narratives
-              </span>
+              <div className="flex flex-col">
+                <span className="font-[Cinzel] text-3xl tracking-tight text-white">
+                  Narratives
+                </span>
+                <span className="font-[Cinzel] text-sm tracking-wide">
+                  {" "}
+                  CREATIVE LABS
+                </span>
+              </div>
             </div>
 
             {/* CTA Button */}

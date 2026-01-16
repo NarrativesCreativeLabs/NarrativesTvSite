@@ -80,7 +80,7 @@ const Portfolio = () => {
           {filteredVideos.map((video, index) => (
             <div
               key={video.id}
-              className="group rounded-lg relative aspect-[4/3] overflow-hidden cursor-pointer bg-black border border-white/5 hover:border-[rgba(var(--primary),0.3)] transition-colors duration-500"
+              className="group rounded-lg relative aspect-4/3 overflow-hidden cursor-pointer bg-black border border-white/20 hover:border-primary transition-colors duration-500"
               style={{ animationDelay: `${index * 100}ms` }}
               onClick={() => setSelectedVideo(video)}
               onMouseEnter={handleMouseEnter}

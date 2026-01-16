@@ -76,36 +76,6 @@ export const services = [
 
 export const portfolioVideos = [
   {
-    id: 1,
-    title: "Urban Dreams",
-    category: "Brand Storytelling",
-    videoUrl: "https://vimeo.com/671573909",
-    tags: ["Brand Storytelling"]
-  },
-  {
-    id: 2,
-    title: "Anniversary",
-    category: "Brand Storytelling",
-    videoUrl: "https://vimeo.com/671574115",
-    tags: ["Brand Storytelling"]
-  },
-  {
-    id: 3,
-    title: "Future Visions",
-    category: "Originals",
-    
-    videoUrl: "https://vimeo.com/749406711",
-    tags: ["Al Nahdi Wazen Campaign"]
-  },
-  {
-    id: 4,
-    title: "B Fit",
-    category: "Brand Storytelling",
-    
-    videoUrl: "https://vimeo.com/534967674",
-    tags: ["Brand Storytelling"]
-  },
-  {
     id: 5,
     title: "REDF Saudi National Day",
     category: "Music Video",
@@ -121,13 +91,6 @@ export const portfolioVideos = [
     tags: ["Originals"]
   },
   {
-    id: 7,
-    title: "Al-Nahdi Ramadan",
-    category: "Originals",
-    videoUrl: "https://vimeo.com/535928834",
-    tags: ["Originals"]
-  },
-  {
     id: 8,
     title: "Savola Saudi National Day",
     category: "Music Video",
@@ -140,6 +103,43 @@ export const portfolioVideos = [
     category: "Originals",
     videoUrl: "https://vimeo.com/671996824",
     tags: ["Originals"]
+  },
+  
+  {
+    id: 3,
+    title: "Al Nahdi Wazen Campaign",
+    category: "Originals",
+    videoUrl: "https://vimeo.com/749406711",
+    tags: ["Originals"]
+  },
+  {
+    id: 7,
+    title: "Al-Nahdi Ramadan",
+    category: "Originals",
+    videoUrl: "https://vimeo.com/535928834",
+    tags: ["Originals"]
+  },
+  {
+    id: 11,
+    title: "Anniversary",
+    category: "Brand Storytelling",
+    videoUrl: "https://vimeo.com/671574115",
+    tags: ["Brand Storytelling"]
+  },
+  {
+    id: 12,
+    title: "B Fit",
+    category: "Brand Storytelling",
+    
+    videoUrl: "https://vimeo.com/534967674",
+    tags: ["Brand Storytelling"]
+  },
+  {
+    id: 10,
+    title: "Urban Dreams",
+    category: "Brand Storytelling",
+    videoUrl: "https://vimeo.com/671573909",
+    tags: ["Brand Storytelling"]
   }
 ];
 

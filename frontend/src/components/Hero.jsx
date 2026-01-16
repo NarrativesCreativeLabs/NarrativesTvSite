@@ -66,7 +66,7 @@ const Hero = () => {
           </div>
 
           {/* Main Headline */}
-          <h1 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-foreground leading-tight">
+          <h1 className="font-display text-4xl md:text-6xl md:text-7xl lg:text-8xl font-bold text-foreground leading-tight">
             Crafting Stories
             <br />
             {/* 🌟 Modern Multi-stop Gradient Text 🌟 */}
@@ -76,12 +76,12 @@ const Hero = () => {
           </h1>
 
           {/* Subheadline */}
-          <p className="text-xl sm:text-2xl md:text-3xl text-white/80 max-w-4xl mx-auto font-light">
+          <p className="text-lg md:text-2xl md:text-3xl text-white/80 max-w-4xl mx-auto font-light">
             We blend visual artistry with <span className="text-primary border-b border-primary/50 shadow-chart-3 ">AI innovation</span> to create compelling narratives that captivate and transform.
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 md:pt-8">
             <button
               onClick={scrollToContact}
               className="cta-button bg-linear-to-r from-primary to-chart-5 text-black font-bold transition-all duration-300 flex items-center gap-2 "
@@ -99,7 +99,7 @@ const Hero = () => {
           </div>
 
           {/* Stats */}
-          <div className="flex items-center justify-between">
+          <div className="md:flex md:mt-16 grid grid-cols-2 space-y-5 items-center justify-between ">
             {[
               { value: '150+', label: 'Projects' },
               { value: '80+', label: 'Clients' },

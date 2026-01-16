@@ -24,27 +24,23 @@ const About = () => {
             </span>
           </h2>
           <div className="space-y-6 text-white/65 text-lg font-light leading-relaxed">
-            <p>
-              {teamInfo.about}
-            </p>
-            <p>
-              {teamInfo.mission}
-            </p>
+            <p>{teamInfo.about}</p>
+            <p>{teamInfo.mission}</p>
           </div>
           <div className="mt-10 space-y-6">
-            {teamInfo.specials.map((special,indes)=>(
+            {teamInfo.specials.map((special, indes) => (
               <div className="border-l-2 border-primary/30 pl-6 transition-all hover:border-primary hover:bg-white/5 p-2 rounded-r-lg group">
-              <h4 className="text-white font-bold text-xl mb-1 group-hover:text-primary transition-colors">
-                {special.title}
-              </h4>
-              <p className="text-sm text-zinc-500 group-hover:text-zinc-400">
-                {special.description}
-              </p>
-            </div>
+                <h4 className="text-white font-bold text-xl mb-1 group-hover:text-primary transition-colors">
+                  {special.title}
+                </h4>
+                <p className="text-sm text-zinc-500 group-hover:text-zinc-400">
+                  {special.description}
+                </p>
+              </div>
             ))}
           </div>
         </div>
-        <div className="rightSide w-full md:w-[40%] flex place-items-end">
+        <div className="rightSide w-full md:w-[40%] flex flex-col items-center space-y-4 place-items-end">
           <div className=" rounded-lg overflow-hidden aspect-square">
             <img
               src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&q=80"
@@ -52,6 +48,15 @@ const About = () => {
               className="w-full h-full object-cover"
             />
           </div>
+          <p className="bg-white/10 px-3 py-1  relative pb-4 rounded-sm">
+            "Narratives is build around one simple Idea Every story begins with
+            attention The dot represents the moment of focus The vertical line
+            is prespective The square is structure which makes a story.
+            Narratives isnt about noise it's about clarity."
+            <span className="absolute bottom-1 right-3 text-primary">
+              ~ Narratives
+            </span>
+          </p>
         </div>
       </div>
       <div className="pt-10 flex flex-wrap gap-8 items-center justify-evenly">
