@@ -28,7 +28,7 @@ const Header = () => {
       <nav
         className={`${
           isMobileMenuOpen ? "bg-black/50 backdrop-blur-xl" : "bg-transparent"
-          } fixed w-full z-50 transition-all duration-500 top-0 border-b 
+          } fixed w-full z-10 transition-all duration-500 top-0 border-b 
           ${isScrolled
             ? " backdrop-blur-xl border-border shadow-2xl"
             : "bg-transparent border-transparent"

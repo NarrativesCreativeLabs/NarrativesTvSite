@@ -30,7 +30,7 @@ const Hero = () => {
   const videoId = 674688232;
   
   return (
-    <section id="hero" className="relative pb-5 min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="hero" className="relative pb-5 min-h-screen flex items-center justify-center overflow-hidden z-0">
       {/* Background Video */}
       
       <div className='absolute top-0 l-0 w-full h-screen pointer-events-none' >
@@ -106,7 +106,7 @@ const Hero = () => {
               { value: '8+', label: 'Years' },
               { value: '25+', label: 'Awards' }
             ].map((stat, index) => (
-              <div key={index} className="text-center hover:cursor-default">
+              <div key={index} className="text-center hover:cursor-default z-0">
                 <div className="text-3xl md:text-4xl font-bold text-primary glow-primary mb-2 hover:text-chart-2 transition-all duration-300">{stat.value}</div>
                 <div className="text-sm text-white/70 uppercase tracking-wider font-mono">{stat.label}</div>
               </div>
