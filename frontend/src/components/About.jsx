@@ -49,9 +49,9 @@ const About = () => {
             />
           </div>
           <p className="bg-white/10 px-3 py-1  relative pb-4 rounded-sm">
-            "Narratives is build around one simple Idea Every story begins with
-            attention The dot represents the moment of focus The vertical line
-            is prespective The square is structure which makes a story.
+            "Narratives is build around one simple Idea. Every story begins with
+            attention The dot represents the moment of focus. The vertical line
+            is prespective. The square is structure which makes a story.
             Narratives isnt about noise it's about clarity."
             <span className="absolute bottom-1 right-3 text-primary">
               ~ Narratives
