@@ -13,7 +13,7 @@ const About = () => {
 
       <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full border border-zinc-800 bg-zinc-900/50 text-muted-foreground text-xs font-bold uppercase tracking-wider mb-8">
         <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
-        Since 2018
+        Since 2019
       </div>
       <div className="flex flex-col md:flex-row gap-3 items-center justify-normal">
         <div className="leftSide w-full md:w-[60%] md:pr-14">
@@ -48,12 +48,12 @@ const About = () => {
               className="w-full h-full object-cover"
             />
           </div>
-          <p className="bg-white/10 px-3 py-1  relative pb-4 rounded-sm">
+          <p className="bg-white/10 px-4 py-3 text-md relative pb-6 rounded-xl">
             "Narratives is build around one simple Idea. Every story begins with
             attention The dot represents the moment of focus. The vertical line
             is prespective. The square is structure which makes a story.
             Narratives isnt about noise it's about clarity."
-            <span className="absolute bottom-1 right-3 text-primary">
+            <span className="absolute bottom-3 right-4 text-primary">
               ~ Narratives
             </span>
           </p>

@@ -24,14 +24,14 @@ function App() {
 
   return (
     <>
-    <div className={`${loading ? 'block' : 'hidden'} z-90`}>
+    {/* {<div className={`${loading ? 'block' : 'hidden'} z-90`}>
       <Loader />
-    </div>
+    </div>} */}
     
     <div className="App">
       
       
-    <main className='w-full bg-black text-white z-0'>
+    <main className='w-full bg-black text-white '>
       <Header />
       <Hero />
       <Services />
