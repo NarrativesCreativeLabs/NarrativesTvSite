@@ -98,7 +98,7 @@ const Footer = () => {
               {[
                 "Visual Stories",
                 "Music Videos",
-                "AI Stories",
+                "Originals",
                 "AI Automation",
               ].map((service, index) => (
                 <li key={index}>

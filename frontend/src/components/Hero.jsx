@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { ArrowRight, Play } from 'lucide-react';
-
+import ReactPlayer from 'react-player'
 
 const Hero = () => {
   
@@ -27,21 +27,31 @@ const Hero = () => {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   };
-
+  const videoId = 674688232;
+  
   return (
-    <section id="hero" className="relative pb-5 min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="hero" className="relative pb-5 min-h-screen flex items-center justify-center overflow-hidden z-0">
       {/* Background Video */}
-      <div className="absolute inset-0 z-0">
-        <video
-          ref={videoRef}
-          className="w-full h-full object-cover opacity-30"
-          loop
-          muted
-          playsInline
-        >
-          <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4" />
-        </video>
-        <div className="absolute inset-0 bg-background/30"></div>
+      
+      <div className='absolute top-0 l-0 w-full h-screen pointer-events-none' >
+        <iframe
+          src={`https://player.vimeo.com/video/${videoId}?background=1&autopause=0`}
+          frameBorder="0"
+          allow="autoplay; fullscreen"
+          loading="lazy"
+          className='opacity-30'
+          style={{
+            width: '100vw',
+            height: '56.25vw', /* 16:9 Aspect Ratio */
+            minHeight: '100vh',
+            minWidth: '177.77vh', /* 16:9 Aspect Ratio */
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+          }}
+          title="Hero Video Background"
+        ></iframe>
       </div>
 
       
@@ -56,7 +66,7 @@ const Hero = () => {
           </div>
 
           {/* Main Headline */}
-          <h1 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-foreground leading-tight">
+          <h1 className="font-display text-4xl md:text-6xl md:text-7xl lg:text-8xl font-bold text-foreground leading-tight">
             Crafting Stories
             <br />
             {/* 🌟 Modern Multi-stop Gradient Text 🌟 */}
@@ -66,12 +76,12 @@ const Hero = () => {
           </h1>
 
           {/* Subheadline */}
-          <p className="text-xl sm:text-2xl md:text-3xl text-white/80 max-w-4xl mx-auto font-light">
+          <p className="text-lg md:text-2xl md:text-3xl text-white/80 max-w-4xl mx-auto font-light">
             We blend visual artistry with <span className="text-primary border-b border-primary/50 shadow-chart-3 ">AI innovation</span> to create compelling narratives that captivate and transform.
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 md:pt-8">
             <button
               onClick={scrollToContact}
               className="cta-button bg-linear-to-r from-primary to-chart-5 text-black font-bold transition-all duration-300 flex items-center gap-2 "
@@ -89,14 +99,14 @@ const Hero = () => {
           </div>
 
           {/* Stats */}
-          <div className="flex items-center justify-between">
+          <div className="md:flex md:mt-16 grid grid-cols-2 space-y-5 items-center justify-between ">
             {[
               { value: '150+', label: 'Projects' },
               { value: '80+', label: 'Clients' },
               { value: '8+', label: 'Years' },
               { value: '25+', label: 'Awards' }
             ].map((stat, index) => (
-              <div key={index} className="text-center hover:cursor-default">
+              <div key={index} className="text-center hover:cursor-default z-0">
                 <div className="text-3xl md:text-4xl font-bold text-primary glow-primary mb-2 hover:text-chart-2 transition-all duration-300">{stat.value}</div>
                 <div className="text-sm text-white/70 uppercase tracking-wider font-mono">{stat.label}</div>
               </div>
