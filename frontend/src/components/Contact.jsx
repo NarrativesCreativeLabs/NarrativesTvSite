@@ -65,7 +65,7 @@ const Contact = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Form */}
-          <div className="bg-card/50 backdrop-blur-sm border border-border rounded-lg p-8">
+          {/* <div className="bg-card/50 backdrop-blur-sm border border-border rounded-lg p-8">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-mono uppercase tracking-wider text-muted-foreground mb-2">
@@ -79,7 +79,7 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-3 bg-background border border-border rounded-lg text-foreground focus:outline-none focus:border-primary focus:box-glow-primary transition-all duration-200"
-                  placeholder="John Doe"
+                  placeholder=""
                 />
               </div>
 
@@ -95,7 +95,7 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-3 bg-background border border-border rounded-lg text-foreground focus:outline-none focus:border-primary focus:box-glow-primary transition-all duration-200"
-                  placeholder="john@example.com"
+                  placeholder=""
                 />
               </div>
 
@@ -111,7 +111,7 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-3 bg-background border border-border rounded-lg text-foreground focus:outline-none focus:border-primary focus:box-glow-primary transition-all duration-200"
-                  placeholder="Project Inquiry"
+                  placeholder=""
                 />
               </div>
 
@@ -146,6 +146,14 @@ const Contact = () => {
                 )}
               </button>
             </form>
+          </div> */}
+          {/* Contact Image */}
+          <div className="flex items-center justify-center lg:justify-start">
+            <img
+              src="/contact.jpeg"
+              alt="Contact us"
+              className="w-full max-w-md rounded-2xl border border-border shadow-xl object-cover"
+            />
           </div>
 
           {/* Contact Info */}
@@ -183,26 +191,7 @@ const Contact = () => {
             </div>
 
             {/* Social Links */}
-            <div className="pt-8">
-              <h4 className="text-foreground font-bold mb-4">Follow Us</h4>
-              <div className="flex gap-4">
-                {socialLinks.map((link, index) => {
-                  const Icon = iconComponents[link.icon];
-                  return (
-                    <a
-                      key={index}
-                      href={link.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label={link.name}
-                      className="w-12 h-12 rounded-lg bg-card/50 border border-border hover:border-primary hover:bg-primary/10 hover:box-glow-primary flex items-center justify-center text-muted-foreground hover:text-primary transition-all duration-300"
-                    >
-                      {Icon && <Icon size={20} />}
-                    </a>
-                  );
-                })}
-              </div>
-            </div>
+
           </div>
         </div>
       </div>

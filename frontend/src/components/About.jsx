@@ -43,17 +43,15 @@ const About = () => {
         <div className="rightSide w-full md:w-[40%] flex flex-col items-center space-y-4 place-items-end">
           <div className=" rounded-lg overflow-hidden aspect-square">
             <img
-              src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&q=80"
+              src="/about.jpeg"
               alt="Narratives Team"
               className="w-full h-full object-cover"
             />
           </div>
-          <p className="bg-white/10 px-4 py-3 text-md relative pb-6 rounded-xl">
-            "Narratives is build around one simple Idea. Every story begins with
-            attention The dot represents the moment of focus. The vertical line
-            is prespective. The square is structure which makes a story.
-            Narratives isnt about noise it's about clarity."
-            <span className="absolute bottom-3 right-4 text-primary">
+          <p className="bg-white/10 px-4 py-3 text-md relative pb-8 rounded-xl">
+            "And at the end, we are nothing but stories! A story makes you what
+            you are. We build ourselves out of that story."
+            <span className="absolute bottom-2 right-4 text-primary">
               ~ Narratives
             </span>
           </p>

@@ -2,19 +2,19 @@ export const contactDetails = [
   {
     icon: 'Mail',
     title: 'Email',
-    value: 'business@narratives.tv',
-    href: 'mailto:business@narratives.tv'
+    value: 'contact@narratives.tv',
+    href: 'mailto:contact@narratives.tv'
   },
   {
     icon: 'Phone',
     title: 'Phone',
-    value: '+1 (234) 567-8900',
-    href: 'tel:+1234567890'
+    value: '+91 8341056554',
+    href: 'tel:+918341056554'
   },
   {
     icon: 'MapPin',
     title: 'Location',
-    value: '123 Creative Street San Francisco, CA 94102',
+    value: 'Hyderabad, India',
   }
 ];
 

@@ -47,7 +47,7 @@ const Header = () => {
                 </span>
                 <span className="font-[Cinzel] text-sm tracking-wide">
                   {" "}
-                  CREATIVE LABS
+                  CREATIVE LAB
                 </span>
               </div>
             </div>

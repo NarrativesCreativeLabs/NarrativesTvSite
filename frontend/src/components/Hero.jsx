@@ -27,31 +27,19 @@ const Hero = () => {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   };
-  const videoId = 674688232;
-  
   return (
     <section id="hero" className="relative pb-5 min-h-screen flex items-center justify-center overflow-hidden z-0">
       {/* Background Video */}
-      
-      <div className='absolute top-0 l-0 w-full h-screen pointer-events-none' >
-        <iframe
-          src={`https://player.vimeo.com/video/${videoId}?background=1&autopause=0`}
-          frameBorder="0"
-          allow="autoplay; fullscreen"
-          loading="lazy"
-          className='opacity-30'
-          style={{
-            width: '100vw',
-            height: '56.25vw', /* 16:9 Aspect Ratio */
-            minHeight: '100vh',
-            minWidth: '177.77vh', /* 16:9 Aspect Ratio */
-            position: 'absolute',
-            top: '50%',
-            left: '50%',
-            transform: 'translate(-50%, -50%)',
-          }}
-          title="Hero Video Background"
-        ></iframe>
+      <div className='absolute inset-0 w-full h-full overflow-hidden pointer-events-none'>
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className='absolute inset-0 w-full h-full object-cover opacity-30'
+          src="/hero-section.mp4"
+          aria-label="Hero section background video"
+        />
       </div>
 
       

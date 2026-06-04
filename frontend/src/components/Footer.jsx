@@ -42,7 +42,7 @@ const Footer = () => {
               Crafting compelling stories through visual artistry and AI
               innovation. Let's create something extraordinary together.
             </p>
-            <div className="flex gap-4">
+            {/* <div className="flex gap-4">
               {socialLinks.map((link, index) => {
                 const Icon = iconComponents[link.icon];
                 return (
@@ -58,7 +58,7 @@ const Footer = () => {
                   </a>
                 );
               })}
-            </div>
+            </div> */}
           </div>
 
           {/* Quick Links */}
