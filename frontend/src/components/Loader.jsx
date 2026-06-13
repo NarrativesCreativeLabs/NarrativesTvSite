@@ -1,24 +1,11 @@
-// src/components/Loader.jsx
 import React from 'react';
-import loadingWebm from '../assets/loading.webm'; // Adjust path if needed
-import { useState } from 'react';
-import { useEffect } from 'react';
 
-const Loader = () => {
-    
+const Loader = ({ gone }) => {
   return (
-    // Tailwind v4 classes for a fixed, full-screen overlay
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black">
-      <video
-        autoPlay
-        muted
-        loop
-        playsInline
-        className="w-full h-full object-cover" // 'object-cover' fills screen, 'object-contain' keeps aspect ratio
-      >
-        <source src={loadingWebm} type="video/webm" />
-        {/* Your browser does not support the video tag. */}
-      </video>
+    <div id="loader" className={gone ? 'gone' : ''}>
+      <div className="bindu-ring"></div>
+      <div className="word">Narratives Creative Lab</div>
+      <div className="skt-line">कथा आरभ्यते — the story begins</div>
     </div>
   );
 };
