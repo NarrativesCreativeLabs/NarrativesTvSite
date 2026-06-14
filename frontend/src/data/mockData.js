@@ -18,29 +18,6 @@ export const contactDetails = [
   }
 ];
 
-export const socialLinks = [
-  {
-    name: 'Instagram',
-    href: '#',
-    icon: 'Instagram' 
-  },
-  {
-    name: 'Twitter',
-    href: '#',
-    icon: 'Twitter'
-  },
-  {
-    name: 'LinkedIn',
-    href: '#',
-    icon: 'Linkedin'
-  },
-  {
-    name: 'YouTube',
-    href: '#',
-    icon: 'Youtube'
-  }
-];
-
 // Mock data for Narratives website
 
 export const services = [
