@@ -46,15 +46,16 @@ body{
 }
 @keyframes grain{0%,100%{transform:translate(0,0)}10%{transform:translate(-5%,-8%)}30%{transform:translate(3%,-12%)}50%{transform:translate(8%,4%)}70%{transform:translate(-9%,6%)}90%{transform:translate(4%,9%)}}
 @media(prefers-reduced-motion:reduce){.grain{animation:none}}
+body.lightbox-open .grain{opacity:.01}
 
 .cursor{
   position:fixed;width:34px;height:34px;border:1.5px solid var(--rasa);
-  border-radius:50%;pointer-events:none;z-index:300;
+  border-radius:50%;pointer-events:none;z-index:10000;
   transform:translate(-50%,-50%);
   transition:width .35s,height .35s,border-color .5s;mix-blend-mode:difference;
 }
 .cursor.hot{width:64px;height:64px}
-.cursor-dot{position:fixed;width:5px;height:5px;background:var(--rasa);border-radius:50%;pointer-events:none;z-index:300;transform:translate(-50%,-50%);transition:background .5s}
+.cursor-dot{position:fixed;width:5px;height:5px;background:var(--rasa);border-radius:50%;pointer-events:none;z-index:10000;transform:translate(-50%,-50%);transition:background .5s}
 
 #loader{
   position:fixed;inset:0;background:#080812;z-index:500;

@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { portfolioVideos } from '../data/mockData';
 import useReveal from '../lib/useReveal';
 
@@ -51,6 +52,18 @@ const Portfolio = () => {
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, []);
+
+  // Manage body scroll and grain opacity class when lightbox is open
+  useEffect(() => {
+    if (selectedVideo) {
+      document.body.classList.add('lightbox-open');
+    } else {
+      document.body.classList.remove('lightbox-open');
+    }
+    return () => {
+      document.body.classList.remove('lightbox-open');
+    };
+  }, [selectedVideo]);
 
   return (
     <>
@@ -125,7 +138,7 @@ const Portfolio = () => {
       </section>
 
       {/* Lightbox Video Player Modal */}
-      {selectedVideo && (
+      {selectedVideo && createPortal(
         <div 
           id="lightbox" 
           className="open"
@@ -145,7 +158,7 @@ const Portfolio = () => {
               ✕
             </button>
 
-            <div id="lbPlayer">
+            <div id="lbPlayer" style={{ width: '100%', height: '100%' }}>
               {selectedVideo.vimeo ? (
                 <iframe
                   src={`https://player.vimeo.com/video/${selectedVideo.vimeo}?autoplay=1&color=d4ab57&title=0&byline=0`}
@@ -178,7 +191,8 @@ const Portfolio = () => {
               )}
             </div>
           </div>
-        </div>
+        </div>,
+        document.body
       )}
     </>
   );
