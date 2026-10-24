@@ -1,106 +1,102 @@
-import React, { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import React, { useState, useEffect } from 'react';
+import { Menu, X } from 'lucide-react';
 
 const Header = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      setScrolled(window.scrollY > 50);
     };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-      setIsMobileMenuOpen(false);
-    }
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!mobileMenuOpen);
   };
 
   return (
     <>
-      {/* Navigation */}
-      <nav
-        className={`${
-          isMobileMenuOpen ? "bg-black/50 backdrop-blur-xl" : "bg-transparent"
-        } fixed w-full z-50 transition-all duration-500 top-0 border-b ${
-          isScrolled
-            ? " backdrop-blur-xl border-border shadow-2xl"
-            : "bg-transparent border-transparent"
-        }`}
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
-          <div className="flex items-center justify-between h-24">
-            {/* Logo */}
-            <div className="flex items-center gap-3 cursor-pointer group">
-              <span className="font-bold text-3xl tracking-tight text-white">
-                Narratives
-              </span>
-            </div>
-
-            
-            
-
-            {/* CTA Button */}
-            <div className="hidden md:flex gap-7 items-center ">
-              {/* Desktop Menu */}
-              <div className="hidden md:block">
-              <div className="ml-10 flex items-baseline space-x-10">
-                {["Services", "Work", "About"].map((item) => (
-                  <a
-                    key={item}
-                    href={`#${item.toLowerCase()}`}
-                    className="text-lg font-medium text-white/75 hover:text-white transition-colors relative group"
-                  >
-                    {item}
-                    <span className="absolute -bottom-1 py-[1px] left-0 w-0 h-px bg-gradient-to-r from-chart-2 to-chart-3 transition-all duration-300 group-hover:w-full"></span>
-                  </a>
-                ))}
-              </div>
-            </div>
-              <a href="#contact">
-                <span className="transition-all duration-300 px-5 py-2 bg-gradient-to-r from-chart-1 to-chart-3 rounded-full text-black/80 font-bold hover:shadow-[0_0_20px_-5px] hover:shadow-chart-3">Lets talk</span>
-              </a>
-            </div>
-
-            {/* Mobile menu button */}
-            <div className="md:hidden flex items-center">
-              <button
-                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="text-white/75 hover:text-white p-2"
-              >
-                {isMobileMenuOpen ? (
-                  <X className="w-6 h-6" />
-                ) : (
-                  <Menu className="w-6 h-6" />
-                )}
-              </button>
-            </div>
-          </div>
+      <nav className={scrolled || mobileMenuOpen ? 'scrolled' : ''}>
+        <a className="mark" href="#hero" aria-label="Narratives Creative Lab">
+          <svg width="50" height="58" viewBox="0 0 60 70" fill="none">
+            <rect x="8" y="8" width="44" height="54" stroke="#f0ead9" stroke-width="2.4"/>
+            <path d="M15 62 V30 Q15 17 30 17 Q45 17 45 30 V62" stroke="rgba(240,234,217,.4)" stroke-width="1.2"/>
+            <line x1="30" y1="8" x2="30" y2="62" stroke="#f0ead9" stroke-width="1.6"/>
+            <circle cx="30" cy="33.6" r="4.6" stroke="#d4ab57" stroke-width="2.4" fill="#080812"/>
+          </svg>
+          <span class="name"><b>Narratives</b><i>Creative Lab</i></span>
+        </a>
+        
+        {/* Desktop Nav Links */}
+        <div className="nav-right">
+          <a className="nav-link" href="#chakra-sec">Emotions</a>
+          <a className="nav-link" href="#portfolio-grid">Work</a>
+          <a className="nav-link" href="#craft">Craft</a>
+          <a className="nav-link" href="#music">Sound</a>
+          <a className="nav-link" href="#door">Contact</a>
+          
+          {/* Mobile Hamburguer Toggle */}
+          <button 
+            className="md:hidden block text-white focus:outline-none ml-4" 
+            onClick={toggleMobileMenu}
+            aria-label="Toggle menu"
+            style={{ background: 'none', border: 'none', cursor: 'pointer' }}
+          >
+            {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
+          </button>
         </div>
-        {/* Mobile Menu */}
-        {isMobileMenuOpen && (
-          <div className="md:hidden  border-b border-border  w-full">
-            <div className="px-4 pt-2 pb-6 space-y-2 ">
-              {["Services", "Work", "About", "Contact"].map((item) => (
-                <a
-                  key={item}
-                  href={`#${item.toLowerCase()}`}
-                  className="block px-3 py-4 rounded-lg text-lg font-medium text-muted-foreground hover:text-white hover:bg-white/5"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  {item}
-                </a>
-              ))}
-            
-            </div>
-          </div>
-        )}
       </nav>
+
+      {/* Mobile Menu Overlay */}
+      {mobileMenuOpen && (
+        <div 
+          className="fixed inset-0 z-90 bg-[#080812] flex flex-col justify-center items-center gap-8 md:hidden"
+          style={{
+            backdropFilter: 'blur(20px)',
+            background: 'rgba(8, 8, 18, 0.98)',
+            transition: 'opacity 0.4s ease'
+          }}
+        >
+          <a 
+            className="text-2xl font-mono tracking-widest text-[#cfc8b6] hover:text-[#f1d493] uppercase no-underline"
+            href="#chakra-sec" 
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            Emotions
+          </a>
+          <a 
+            className="text-2xl font-mono tracking-widest text-[#cfc8b6] hover:text-[#f1d493] uppercase no-underline"
+            href="#portfolio-grid" 
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            Work
+          </a>
+          <a 
+            className="text-2xl font-mono tracking-widest text-[#cfc8b6] hover:text-[#f1d493] uppercase no-underline"
+            href="#craft" 
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            Craft
+          </a>
+          <a 
+            className="text-2xl font-mono tracking-widest text-[#cfc8b6] hover:text-[#f1d493] uppercase no-underline"
+            href="#music" 
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            Sound
+          </a>
+          <a 
+            className="text-2xl font-mono tracking-widest text-[#cfc8b6] hover:text-[#f1d493] uppercase no-underline"
+            href="#door" 
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            Contact
+          </a>
+        </div>
+      )}
     </>
   );
 };

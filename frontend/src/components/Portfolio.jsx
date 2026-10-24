@@ -1,121 +1,200 @@
-import React, { useState } from 'react';
-import { Play, X } from 'lucide-react';
+import React, { useState, useRef, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { portfolioVideos } from '../data/mockData';
+import useReveal from '../lib/useReveal';
 
 const Portfolio = () => {
+  const [headRef, headIn] = useReveal({ threshold: 0.1 });
+  const [gridRef, gridIn] = useReveal({ threshold: 0.05 });
+
+  const [activePreviewId, setActivePreviewId] = useState(null);
+  const [renderedPreviewId, setRenderedPreviewId] = useState(null);
   const [selectedVideo, setSelectedVideo] = useState(null);
-  const [filter, setFilter] = useState('All');
 
-  const categories = ['All', 'Brand Storytelling', 'Music Videos', 'AI Stories'];
+  const enterTimerRef = useRef(null);
+  const leaveTimerRef = useRef(null);
 
-  const filteredVideos = filter === 'All' 
-    ? portfolioVideos 
-    : portfolioVideos.filter(video => video.tags.includes(filter));
+  const handleMouseEnter = (vimeoId) => {
+    if (leaveTimerRef.current) {
+      clearTimeout(leaveTimerRef.current);
+      leaveTimerRef.current = null;
+    }
+    if (enterTimerRef.current) clearTimeout(enterTimerRef.current);
+
+    enterTimerRef.current = setTimeout(() => {
+      setActivePreviewId(vimeoId);
+      setRenderedPreviewId(vimeoId);
+    }, 220);
+  };
+
+  const handleMouseLeave = () => {
+    if (enterTimerRef.current) clearTimeout(enterTimerRef.current);
+    setActivePreviewId(null);
+
+    // Keep iframe mounted for a fade transition duration (650ms)
+    leaveTimerRef.current = setTimeout(() => {
+      setRenderedPreviewId(null);
+    }, 650);
+  };
+
+  useEffect(() => {
+    return () => {
+      if (enterTimerRef.current) clearTimeout(enterTimerRef.current);
+      if (leaveTimerRef.current) clearTimeout(leaveTimerRef.current);
+    };
+  }, []);
+
+  // Listen to Escape key to close lightbox
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') setSelectedVideo(null);
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, []);
+
+  // Manage body scroll and grain opacity class when lightbox is open
+  useEffect(() => {
+    if (selectedVideo) {
+      document.body.classList.add('lightbox-open');
+    } else {
+      document.body.classList.remove('lightbox-open');
+    }
+    return () => {
+      document.body.classList.remove('lightbox-open');
+    };
+  }, [selectedVideo]);
 
   return (
-    <section id="portfolio" className="py-24 pt-10 border-y border-border g-gradient-to-b from-background via-card/10 to-background">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
-        {/* Section Header */}
-        <div className="text-center mb-12 space-y-4">
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-display font-bold text-foreground">
-            Our <span className="text-primary glow-primary">Portfolio</span>
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Explore our collection of captivating visual stories and creative projects
-          </p>
-        </div>
+    <>
+      <section id="portfolio-grid" data-bg="#0a0d12" data-veil="0.08">
+        <div className="pg-wrap">
+          <div ref={headRef} className={`pg-head reveal ${headIn ? 'in' : ''}`}>
+            <h2>Selected Works</h2>
+            <p>Hover any film to preview it. Click to watch in full.</p>
+          </div>
+          
+          <div 
+            ref={gridRef}
+            className={`pg-grid reveal ${gridIn ? 'in' : ''}`}
+            data-testid="pg-grid"
+            id="pgGrid"
+          >
+            {portfolioVideos.map((video, idx) => {
+              const isActive = activePreviewId === video.vimeo;
+              const isRendered = renderedPreviewId === video.vimeo;
+              const formattedIndex = String(idx + 1).padStart(2, '0');
 
-        {/* Filter Tabs */}
-        <div className="flex flex-wrap items-center justify-center gap-3 mb-12">
-          {categories.map((category) => (
-            <button
-              key={category}
-              onClick={() => setFilter(category)}
-              className={`px-6 py-2 rounded-full font-mono text-sm uppercase tracking-wider transition-all duration-300 ${
-                filter === category
-                  ? 'bg-primary text-background border border-primary box-glow-primary'
-                  : 'bg-transparent text-muted-foreground border border-border hover:border-primary hover:text-primary'
-              }`}
-            >
-              {category}
-            </button>
-          ))}
-        </div>
+              return (
+                <div
+                  key={video.vimeo}
+                  className="pg-card"
+                  role="button"
+                  tabIndex="0"
+                  data-testid={`pg-card-${idx}`}
+                  onMouseEnter={() => handleMouseEnter(video.vimeo)}
+                  onMouseLeave={handleMouseLeave}
+                  onClick={() => setSelectedVideo(video)}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      setSelectedVideo(video);
+                    }
+                  }}
+                >
+                  <div className="pgc-media">
+                    {/* Static high-res thumbnail */}
+                    <div 
+                      className="pgc-thumb" 
+                      style={{ backgroundImage: `url('${video.thumb}')` }}
+                    />
 
-        {/* Video Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredVideos.map((video, index) => (
-            <div
-              key={video.id}
-              className="group rounded-lg relative aspect-[4/3] overflow-hidden cursor-pointer bg-black border border-white/5 hover:border-[rgba(var(--primary),0.3)] transition-colors duration-500"
-              style={{ animationDelay: `${index * 100}ms` }}
-              onClick={() => setSelectedVideo(video)}
-            >
-              {/* Thumbnail */}
-              <img
-                src={video.thumbnail}
-                alt={video.title}
-                className="w-full h-full object-cover"
-              />
-
-              {/* Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                <div className="w-16 h-16 rounded-full bg-primary/70 backdrop-blur-sm flex items-center justify-center mx-auto transform group-hover:scale-110 transition-transform duration-300 box-glow-primary">
-                    <Play size={28} className="text-background ml-1" />
+                    {/* Debounced hover iframe video layer */}
+                    <div className={`pgc-video ${isActive ? 'on' : ''}`}>
+                      {isRendered && (
+                        <iframe
+                          src={`https://player.vimeo.com/video/${video.vimeo}?background=1&autoplay=1&muted=1&loop=1&autopause=0&quality=540p`}
+                          allow="autoplay"
+                          tabIndex="-1"
+                          loading="lazy"
+                          title={`${video.title} Preview`}
+                        />
+                      )}
+                    </div>
+                    
+                    <div className="pgc-line" />
                   </div>
                   
-                </div>
-              {/* Category Badge */}
-              <div className="absolute bottom-0 left-0 p-8 w-full">
-                  <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 ease-out">
-                    <span className="text-primary text-s font-bold uppercase tracking-wider mb-2 block">{video.category}</span>
-                    <h3 className="text-2xl font-bold text-white group-hover:text-chart-5 transition-colors">{video.title}</h3>
+                  <div className="pgc-cap">
+                    <span className="pgc-num">{formattedIndex}</span>
+                    <h3 className="pgc-title">{video.title}</h3>
+                    <span className="pgc-cat">{video.category}</span>
                   </div>
-                  <div className="h-1 w-0 bg-primary mt-4 transition-all duration-500 group-hover:w-36"></div>
                 </div>
-            </div>
-          ))}
+              );
+            })}
+          </div>
         </div>
+      </section>
 
-        {/* Video Modal */}
-        {selectedVideo && (
-          <div 
-            className="fixed inset-0 z-50 bg-black/95 backdrop-blur-sm flex items-center justify-center p-4"
-            onClick={() => setSelectedVideo(null)}
-          >
-            <div 
-              className="relative w-full max-w-5xl"
-              onClick={(e) => e.stopPropagation()}
+      {/* Lightbox Video Player Modal */}
+      {selectedVideo && createPortal(
+        <div 
+          id="lightbox" 
+          className="open"
+          onClick={() => setSelectedVideo(null)}
+        >
+          <div className="lb-frame" onClick={(e) => e.stopPropagation()}>
+            <div className="lb-meta" id="lbMeta">
+              {selectedVideo.category} — {selectedVideo.title}
+            </div>
+            
+            <button 
+              id="lbClose"
+              className="lb-close"
+              onClick={() => setSelectedVideo(null)}
+              aria-label="Close lightbox"
             >
-              {/* Close Button */}
-              <button
-                onClick={() => setSelectedVideo(null)}
-                className="absolute -top-12 right-0 text-foreground hover:text-primary transition-colors duration-200"
-              >
-                <X size={32} />
-              </button>
+              ✕
+            </button>
 
-              {/* Video Player */}
-              <div className="aspect-video rounded-lg overflow-hidden border-2 border-primary box-glow-primary">
-                <video
-                  controls
-                  autoPlay
-                  className="w-full h-full"
-                >
-                  <source src={selectedVideo.videoUrl} type="video/mp4" />
-                </video>
-              </div>
-
-              {/* Video Info */}
-              <div className="mt-6 text-center">
-                <h3 className="text-2xl font-bold text-foreground mb-2 glow-primary">{selectedVideo.title}</h3>
-                <p className="text-muted-foreground">{selectedVideo.category}</p>
-              </div>
+            <div id="lbPlayer" style={{ width: '100%', height: '100%' }}>
+              {selectedVideo.vimeo ? (
+                <iframe
+                  src={`https://player.vimeo.com/video/${selectedVideo.vimeo}?autoplay=1&color=d4ab57&title=0&byline=0`}
+                  title={selectedVideo.title}
+                  allow="autoplay; fullscreen; picture-in-picture"
+                  allowFullScreen
+                />
+              ) : (
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '18px', alignItems: 'center', justifyContent: 'center', height: '100%', background: '#0a0911' }}>
+                  <div style={{ fontFamily: 'var(--display)', fontSize: '26px', color: '#f0ead9' }}>{selectedVideo.title}</div>
+                  <a 
+                    href="https://vimeo.com/ntusharchowdary" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    style={{ 
+                      fontFamily: 'var(--mono)', 
+                      fontSize: '11px', 
+                      letterSpacing: '.3em', 
+                      textTransform: 'uppercase', 
+                      color: '#d4ab57', 
+                      textDecoration: 'none', 
+                      border: '1px solid #d4ab57', 
+                      borderRadius: '999px', 
+                      padding: '14px 28px' 
+                    }}
+                  >
+                    Watch on Vimeo ↗
+                  </a>
+                </div>
+              )}
             </div>
           </div>
-        )}
-      </div>
-    </section>
+        </div>,
+        document.body
+      )}
+    </>
   );
 };
 

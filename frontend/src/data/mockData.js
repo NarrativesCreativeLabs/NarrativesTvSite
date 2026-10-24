@@ -2,42 +2,19 @@ export const contactDetails = [
   {
     icon: 'Mail',
     title: 'Email',
-    value: 'business@narratives.tv',
-    href: 'mailto:business@narratives.tv'
+    value: 'contact@narratives.tv',
+    href: 'mailto:contact@narratives.tv'
   },
   {
     icon: 'Phone',
     title: 'Phone',
-    value: '+1 (234) 567-8900',
-    href: 'tel:+1234567890'
+    value: '+91 8341056554',
+    href: 'tel:+918341056554'
   },
   {
     icon: 'MapPin',
     title: 'Location',
-    value: '123 Creative Street San Francisco, CA 94102',
-  }
-];
-
-export const socialLinks = [
-  {
-    name: 'Instagram',
-    href: '#',
-    icon: 'Instagram' 
-  },
-  {
-    name: 'Twitter',
-    href: '#',
-    icon: 'Twitter'
-  },
-  {
-    name: 'LinkedIn',
-    href: '#',
-    icon: 'Linkedin'
-  },
-  {
-    name: 'YouTube',
-    href: '#',
-    icon: 'Youtube'
+    value: 'Hyderabad, India',
   }
 ];
 
@@ -75,54 +52,21 @@ export const services = [
 ];
 
 export const portfolioVideos = [
-  {
-    id: 1,
-    title: "Urban Dreams",
-    category: "Brand Storytelling",
-    thumbnail: "https://images.unsplash.com/photo-1536240478700-b869070f9279?w=800&q=80",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
-    tags: ["Brand Storytelling"]
-  },
-  {
-    id: 2,
-    title: "Electric Pulse",
-    category: "Music Video",
-    thumbnail: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=800&q=80",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
-    tags: ["Music Videos"]
-  },
-  {
-    id: 3,
-    title: "Future Visions",
-    category: "AI Story",
-    thumbnail: "https://images.unsplash.com/photo-1535016120720-40c646be5580?w=800&q=80",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
-    tags: ["AI Stories"]
-  },
-  {
-    id: 4,
-    title: "Neon Nights",
-    category: "Brand Storytelling",
-    thumbnail: "https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?w=800&q=80",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
-    tags: ["Brand Storytelling"]
-  },
-  {
-    id: 5,
-    title: "Rhythm & Light",
-    category: "Music Video",
-    thumbnail: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=800&q=80",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4",
-    tags: ["Music Videos"]
-  },
-  {
-    id: 6,
-    title: "Digital Horizons",
-    category: "AI Story",
-    thumbnail: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
-    tags: ["AI Stories"]
-  }
+  { title: '90 YEARS OF SAUDI', category: 'Brand Storytelling', thumb: 'https://vumbnail.com/588419814_large.jpg', vimeo: '588419814' },
+  { title: 'KAEC_A_Secret_Place', category: 'Brand Storytelling', thumb: 'https://vumbnail.com/752705333_large.jpg', vimeo: '752705333' },
+  { title: 'Goody | CVF Campaign', category: 'Brand Storytelling', thumb: 'https://vumbnail.com/739381314_large.jpg', vimeo: '739381314' },
+  { title: 'Jeddah Central District', category: 'Brand Storytelling', thumb: 'https://i.vimeocdn.com/video/1416961524-0e2031589cac63b5928ff44a4a36ae8f29c91eef24bcd711280392793a913741-d_1280?region=us', vimeo: '737171123' },
+  { title: 'Savola Saudi National Day', category: 'Brand Storytelling', thumb: 'https://i.vimeocdn.com/video/1273281419-d93e410d840af4c2cba2ce5e75608ae6a6ce8cba0e73081e1_1280?region=us', vimeo: '737169192' },
+  { title: 'Masar City Central', category: 'Brand Storytelling', thumb: 'https://i.vimeocdn.com/video/1361767794-9f4b662114723e04a4b9d7b7cd12690e76dd54b424e18cddf21b204439f3ab7d-d_1280?region=us', vimeo: '737171123' },
+  { title: 'Al Nahdi Wazen Campaign', category: 'Brand Storytelling', thumb: 'https://i.vimeocdn.com/video/1506998112-0970801c7e47018ce8d2d4c62d0d06c9567294725aefdf041c4195728d9d3d03-d_1280?region=us', vimeo: '749397931' },
+  { title: 'Al-Nahdi Ramadan', category: 'Brand Storytelling', thumb: 'https://i.vimeocdn.com/video/1109520022-9df8889160afca63bfdab6879c1d5b4a522cb7e82e3aaeeb2ce89e157638e7ef-d_1280?region=us', vimeo: '749397931' },
+  { title: 'Anniversary', category: 'Brand Storytelling', thumb: 'https://i.vimeocdn.com/video/1362637366-5955c8a31213c4f8aa3e543d875c6ee2f7c19d45ab0dd121061925822bb811dd-d_1280?region=us', vimeo: '739379294' },
+  { title: 'B Fit', category: 'Brand Storytelling', thumb: 'https://i.vimeocdn.com/video/1152281300-eaaac1887fcd9ec8cc2430338b8434e1396f0e0a87501a41896fb00fced3b855-d_1280?region=us', vimeo: '739377143' },
+  { title: 'Urban Dreams', category: 'Brand Storytelling', thumb: 'https://i.vimeocdn.com/video/1360676408-d535febefdfc363fe10bc6079fc117132a64486bb157c3622f28297c5a2155ae-d_1280?region=us', vimeo: '739379294' },
+  { title: 'Lays Music video', category: 'Brand Storytelling', thumb: 'https://vumbnail.com/797689253_large.jpg', vimeo: '797689253' },
+  { title: 'MEMCO Jutaku', category: 'Ai hyperreal film', thumb: 'https://vumbnail.com/1197721061_large.jpg', vimeo: '1197721061' },
+  { title: 'Glance AI × InMobi', category: 'Ai brand film', thumb: 'https://vumbnail.com/1132853538_large.jpg', vimeo: '1132853538' },
+  { title: 'Sri Aditya Vantage', category: 'Ai real estate', thumb: 'https://vumbnail.com/1132853481_large.jpg', vimeo: '1132853481' }
 ];
 
 export const teamInfo = {

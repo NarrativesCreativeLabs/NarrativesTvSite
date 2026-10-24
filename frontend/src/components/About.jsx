@@ -13,7 +13,7 @@ const About = () => {
 
       <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full border border-zinc-800 bg-zinc-900/50 text-muted-foreground text-xs font-bold uppercase tracking-wider mb-8">
         <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
-        Since 2018
+        Since 2019
       </div>
       <div className="flex flex-col md:flex-row gap-3 items-center justify-normal">
         <div className="leftSide w-full md:w-[60%] md:pr-14">
@@ -24,34 +24,37 @@ const About = () => {
             </span>
           </h2>
           <div className="space-y-6 text-white/65 text-lg font-light leading-relaxed">
-            <p>
-              {teamInfo.about}
-            </p>
-            <p>
-              {teamInfo.mission}
-            </p>
+            <p>{teamInfo.about}</p>
+            <p>{teamInfo.mission}</p>
           </div>
           <div className="mt-10 space-y-6">
-            {teamInfo.specials.map((special,indes)=>(
+            {teamInfo.specials.map((special, indes) => (
               <div className="border-l-2 border-primary/30 pl-6 transition-all hover:border-primary hover:bg-white/5 p-2 rounded-r-lg group">
-              <h4 className="text-white font-bold text-xl mb-1 group-hover:text-primary transition-colors">
-                {special.title}
-              </h4>
-              <p className="text-sm text-zinc-500 group-hover:text-zinc-400">
-                {special.description}
-              </p>
-            </div>
+                <h4 className="text-white font-bold text-xl mb-1 group-hover:text-primary transition-colors">
+                  {special.title}
+                </h4>
+                <p className="text-sm text-zinc-500 group-hover:text-zinc-400">
+                  {special.description}
+                </p>
+              </div>
             ))}
           </div>
         </div>
-        <div className="rightSide w-full md:w-[40%] flex place-items-end">
+        <div className="rightSide w-full md:w-[40%] flex flex-col items-center space-y-4 place-items-end">
           <div className=" rounded-lg overflow-hidden aspect-square">
             <img
-              src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&q=80"
+              src="/about.jpeg"
               alt="Narratives Team"
               className="w-full h-full object-cover"
             />
           </div>
+          <p className="bg-white/10 px-4 py-3 text-md relative pb-8 rounded-xl">
+            "And at the end, we are nothing but stories! A story makes you what
+            you are. We build ourselves out of that story."
+            <span className="absolute bottom-2 right-4 text-primary">
+              ~ Narratives
+            </span>
+          </p>
         </div>
       </div>
       <div className="pt-10 flex flex-wrap gap-8 items-center justify-evenly">
