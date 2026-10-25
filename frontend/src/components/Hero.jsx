@@ -9,6 +9,10 @@ const Hero = () => {
   return (
     <section id="hero" data-bg="#080812" data-veil=".85" className="relative">
       {/* Background Video */}
+      <video className="hero-video" autoPlay muted loop playsInline preload="metadata" poster="/hero-poster.jpg" aria-hidden="true">
+        <source src="/hero-section.webm" type="video/webm" />
+        <source src="/hero-section-lite.mp4" type="video/mp4" />
+      </video>
 
       <div style={{ position: "relative", zIndex: 1 }}>
         <div ref={ref1} className={`skt-line reveal ${in1 ? "in" : ""}`}>

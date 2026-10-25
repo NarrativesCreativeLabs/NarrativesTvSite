@@ -52,21 +52,21 @@ export const services = [
 ];
 
 export const portfolioVideos = [
-  { title: '90 YEARS OF SAUDI', category: 'Brand Storytelling', thumb: 'https://vumbnail.com/588419814_large.jpg', vimeo: '588419814' },
-  { title: 'KAEC_A_Secret_Place', category: 'Brand Storytelling', thumb: 'https://vumbnail.com/752705333_large.jpg', vimeo: '752705333' },
-  { title: 'Goody | CVF Campaign', category: 'Brand Storytelling', thumb: 'https://vumbnail.com/739381314_large.jpg', vimeo: '739381314' },
-  { title: 'Jeddah Central District', category: 'Brand Storytelling', thumb: 'https://i.vimeocdn.com/video/1416961524-0e2031589cac63b5928ff44a4a36ae8f29c91eef24bcd711280392793a913741-d_1280?region=us', vimeo: '737171123' },
-  { title: 'Savola Saudi National Day', category: 'Brand Storytelling', thumb: 'https://i.vimeocdn.com/video/1273281419-d93e410d840af4c2cba2ce5e75608ae6a6ce8cba0e73081e1_1280?region=us', vimeo: '737169192' },
-  { title: 'Masar City Central', category: 'Brand Storytelling', thumb: 'https://i.vimeocdn.com/video/1361767794-9f4b662114723e04a4b9d7b7cd12690e76dd54b424e18cddf21b204439f3ab7d-d_1280?region=us', vimeo: '737171123' },
-  { title: 'Al Nahdi Wazen Campaign', category: 'Brand Storytelling', thumb: 'https://i.vimeocdn.com/video/1506998112-0970801c7e47018ce8d2d4c62d0d06c9567294725aefdf041c4195728d9d3d03-d_1280?region=us', vimeo: '749397931' },
-  { title: 'Al-Nahdi Ramadan', category: 'Brand Storytelling', thumb: 'https://i.vimeocdn.com/video/1109520022-9df8889160afca63bfdab6879c1d5b4a522cb7e82e3aaeeb2ce89e157638e7ef-d_1280?region=us', vimeo: '749397931' },
-  { title: 'Anniversary', category: 'Brand Storytelling', thumb: 'https://i.vimeocdn.com/video/1362637366-5955c8a31213c4f8aa3e543d875c6ee2f7c19d45ab0dd121061925822bb811dd-d_1280?region=us', vimeo: '739379294' },
-  { title: 'B Fit', category: 'Brand Storytelling', thumb: 'https://i.vimeocdn.com/video/1152281300-eaaac1887fcd9ec8cc2430338b8434e1396f0e0a87501a41896fb00fced3b855-d_1280?region=us', vimeo: '739377143' },
-  { title: 'Urban Dreams', category: 'Brand Storytelling', thumb: 'https://i.vimeocdn.com/video/1360676408-d535febefdfc363fe10bc6079fc117132a64486bb157c3622f28297c5a2155ae-d_1280?region=us', vimeo: '739379294' },
-  { title: 'Lays Music video', category: 'Brand Storytelling', thumb: 'https://vumbnail.com/797689253_large.jpg', vimeo: '797689253' },
-  { title: 'MEMCO Jutaku', category: 'Ai hyperreal film', thumb: 'https://vumbnail.com/1197721061_large.jpg', vimeo: '1197721061' },
-  { title: 'Glance AI × InMobi', category: 'Ai brand film', thumb: 'https://vumbnail.com/1132853538_large.jpg', vimeo: '1132853538' },
-  { title: 'Sri Aditya Vantage', category: 'Ai real estate', thumb: 'https://vumbnail.com/1132853481_large.jpg', vimeo: '1132853481' }
+  { title: 'MEMCO Jutaku', category: 'AI hyperreal film', thumb: '/thumbs/1197721061.jpg', vimeo: '1197721061', rasa: 'Veera · Courage' },
+  { title: 'Glance AI × InMobi', category: 'AI brand film', thumb: '/thumbs/1132853538.jpg', vimeo: '1132853538', rasa: 'Adbhuta · Wonder' },
+  { title: 'Sri Aditya Vantage', category: 'AI real estate film', thumb: '/thumbs/1132853481.jpg', vimeo: '1132853481', rasa: 'Shanta · Peace' },
+  { title: '90 Years of Saudi', category: 'Brand film', thumb: '/thumbs/588419814.jpg', vimeo: '588419814', rasa: 'Veera · Courage' },
+  { title: 'KAEC — A Secret Place', category: 'Brand film', thumb: '/thumbs/752705333.jpg', vimeo: '752705333', rasa: 'Adbhuta · Wonder' },
+  { title: 'Goody — CVF Campaign', category: 'Brand film', thumb: '/thumbs/739381314.jpg', vimeo: '739381314', rasa: 'Hasya · Joy' },
+  { title: 'Jeddah Central District', category: 'Brand film', thumb: '/thumbs/737171123.jpg', vimeo: '737171123', rasa: 'Adbhuta · Wonder' },
+  { title: 'Savola — Saudi National Day', category: 'Brand film', thumb: '/thumbs/737169192.jpg', vimeo: '737169192', rasa: 'Veera · Courage' },
+  { title: 'Masar City Central', category: 'Brand film', thumb: '/thumbs/737166190.jpg', vimeo: '737166190', rasa: 'Adbhuta · Wonder' },
+  { title: 'Al Nahdi — Wazen Campaign', category: 'Brand film', thumb: '/thumbs/749397931.jpg', vimeo: '749397931', rasa: 'Hasya · Joy' },
+  { title: 'Al Nahdi — Ramadan', category: 'Brand film', thumb: '/thumbs/588420769.jpg', vimeo: '588420769', rasa: 'Karuna · Compassion' },
+  { title: 'ALJ Toyota Land Cruiser — 70 Years', category: 'Brand film', thumb: '/thumbs/739379294.jpg', vimeo: '739379294', rasa: 'Veera · Courage' },
+  { title: 'ALJ Toyota — Unleash', category: 'Brand film', thumb: '/thumbs/737170226.jpg', vimeo: '737170226', rasa: 'Raudra · Fury' },
+  { title: 'B Fit — Gym Launch', category: 'Brand film', thumb: '/thumbs/739377143.jpg', vimeo: '739377143', rasa: 'Veera · Courage' },
+  { title: "Lay's — Music Video", category: 'Music video', thumb: '/thumbs/797689253.jpg', vimeo: '797689253', rasa: 'Hasya · Joy' }
 ];
 
 export const teamInfo = {

@@ -14,13 +14,13 @@ const Originals = () => {
       >
         {/* Sacred Geometry Triangles */}
         <svg className="tri" width="520" height="520" viewBox="0 0 100 100">
-          <polygon points="50,6 94,82 6,82" fill="none" stroke="#d4ab57" stroke-width=".6"/>
-          <polygon points="50,94 6,18 94,18" fill="none" stroke="#d4ab57" stroke-width=".6"/>
+          <polygon points="50,6 94,82 6,82" fill="none" stroke="#d4ab57" strokeWidth=".6"/>
+          <polygon points="50,94 6,18 94,18" fill="none" stroke="#d4ab57" strokeWidth=".6"/>
           <circle cx="50" cy="50" r="2.4" fill="#a72f27"/>
         </svg>
 
         <div className="label">Originals · हमारी फ़िल्में</div>
-        <h2>Some films we make for clients.<br />These, we make <span class="red">because we must.</span></h2>
+        <h2>Some films we make for clients.<br />These, we make <span className="red">because we must.</span></h2>
         <p className="body">
           We make originals because some stories ask to be told. Everything that leaves this studio — commissioned or not — carries the same DNA: deep thought, high standards and the science of feeling; aesthetics and nuance, carried by an agenda and a storyteller's heart. Because a right message, told right, can change the direction of someone's life.
         </p>
@@ -58,8 +58,8 @@ const Originals = () => {
             <span className="stamp" style={{ color: '#d4ab57', borderColor: 'rgba(212, 171, 87, 0.5)' }}>Pending</span>
           </div>
         </div>
-        <p class="orig-wr">Behind the slate sits our Writers' Room — original screenplays, script doctoring, and pitch presentations that bring an idea alive for actors and production houses.</p>
-        <div class="skt-tag">पुराणं दग्ध्वा नवं ज्वालयामः — burn the old, light the new.</div>
+        <p className="orig-wr">Behind the slate sits our Writers' Room — original screenplays, script doctoring, and pitch presentations that bring an idea alive for actors and production houses.</p>
+        <div className="skt-tag">पुराणं दग्ध्वा नवं ज्वालयामः — burn the old, light the new.</div>
       </div>
     </section>
   );

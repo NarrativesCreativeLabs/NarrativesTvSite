@@ -22,12 +22,12 @@ const Header = () => {
       <nav className={scrolled || mobileMenuOpen ? 'scrolled' : ''}>
         <a className="mark" href="#hero" aria-label="Narratives Creative Lab">
           <svg width="50" height="58" viewBox="0 0 60 70" fill="none">
-            <rect x="8" y="8" width="44" height="54" stroke="#f0ead9" stroke-width="2.4"/>
-            <path d="M15 62 V30 Q15 17 30 17 Q45 17 45 30 V62" stroke="rgba(240,234,217,.4)" stroke-width="1.2"/>
-            <line x1="30" y1="8" x2="30" y2="62" stroke="#f0ead9" stroke-width="1.6"/>
-            <circle cx="30" cy="33.6" r="4.6" stroke="#d4ab57" stroke-width="2.4" fill="#080812"/>
+            <rect x="8" y="8" width="44" height="54" stroke="#f0ead9" strokeWidth="2.4"/>
+            <path d="M15 62 V30 Q15 17 30 17 Q45 17 45 30 V62" stroke="rgba(240,234,217,.4)" strokeWidth="1.2"/>
+            <line x1="30" y1="8" x2="30" y2="62" stroke="#f0ead9" strokeWidth="1.6"/>
+            <circle cx="30" cy="33.6" r="4.6" stroke="#d4ab57" strokeWidth="2.4" fill="#080812"/>
           </svg>
-          <span class="name"><b>Narratives</b><i>Creative Lab</i></span>
+          <span className="name"><b>Narratives</b><i>Creative Lab</i></span>
         </a>
         
         {/* Desktop Nav Links */}

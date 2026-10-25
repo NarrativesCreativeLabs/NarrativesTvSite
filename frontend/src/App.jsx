@@ -11,6 +11,7 @@ import AmbientAudioToggle from './components/AmbientAudioToggle';
 // Layout and Sections
 import Header from './components/Header';
 import Hero from './components/Hero';
+import ClientStrip from './components/ClientStrip';
 import Manifesto from './components/Manifesto';
 import Statement from './components/Statement';
 import NavarasaChakra from './components/NavarasaChakra';
@@ -32,12 +33,12 @@ function App() {
     // Stage 1: Add 'gone' class to fade out loader
     const fadeTimer = setTimeout(() => {
       setLoaderGone(true);
-    }, 1800);
+    }, 900);
 
     // Stage 2: Completely unmount/disable loader overlay
     const unmountTimer = setTimeout(() => {
       setLoading(false);
-    }, 3000);
+    }, 1400);
 
     return () => {
       clearTimeout(fadeTimer);
@@ -100,6 +101,7 @@ function App() {
         
         <main>
           <Hero />
+          <ClientStrip />
           <Manifesto />
           <Statement />
           <NavarasaChakra />

@@ -130,6 +130,7 @@ const Portfolio = () => {
                     <h3 className="pgc-title">{video.title}</h3>
                     <span className="pgc-cat">{video.category}</span>
                   </div>
+                  {video.rasa && <div className="pgc-rasa">{video.rasa}</div>}
                 </div>
               );
             })}
